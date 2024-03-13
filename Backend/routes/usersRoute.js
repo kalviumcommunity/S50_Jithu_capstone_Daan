@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const { User } = require('../models/userModel');
+const { User }= require('../models/userModel');
 require('dotenv').config();
 
 
@@ -28,23 +28,34 @@ router.get('/:id', async (req, res) => {
   }
 });
 
+// router.post('/', async (req, res) => {
+//   try {
+//     const { error } = userSchema.validate(req.body);
+//     if (error) {
+//       return res.status(400).json({ error: error.details[0].message });
+//     }
+
+//     const newData = new User(req.body);
+//     const savedData = await newData.save();
+
+
+//     res.status(201).json({ user: savedData });
+//   } catch (error) {
+//     res.status(500).json({ error: error.message });
+//   }
+// });
 router.post('/', async (req, res) => {
   try {
-    const { error } = userSchema.validate(req.body);
-    if (error) {
-      return res.status(400).json({ error: error.details[0].message });
-    }
-
     const newData = new User(req.body);
     const savedData = await newData.save();
-
-    // Generate JWT token
 
     res.status(201).json({ user: savedData });
   } catch (error) {
     res.status(500).json({ error: error.message });
   }
 });
+
+
 
 // Update a User (PUT)
 router.put('/:id', async (req, res) => {
