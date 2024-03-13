@@ -1,0 +1,316 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+
+
+.body {
+    margin: 0;
+    padding: 0;
+    background-image: url("../assets/landingpage.png");
+    width: 1360px;
+    height: 3699px;
+
+}
+
+.logo {
+    padding-left: 50px;
+    /* padding-top: 30px; */
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header {
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    padding: 30px;
+}
+
+.nav-links {
+    margin-top: 45px;
+}
+
+.nav-links a {
+    color: aliceblue;
+    margin-right: 150px;
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: initial;
+    font-weight: 400;
+
+    font-style: normal;
+    font-size: larger;
+
+}
+
+.image1 {
+    margin-left: 70px;
+    width: 1235px;
+    height: 425px;
+    margin-top: 30px;
+}
+
+.button2 {
+    background-color: #fdc711;
+    width: 203px;
+    height: 57px;
+    border-radius: 34px;
+    margin-left: 30px;
+
+}
+
+.button1 {
+    background-color: #100530;
+    width: 203px;
+    height: 57px;
+    border-radius: 34px;
+    border: 1px solid white;
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: initial;
+    font-weight: 400;
+
+    font-style: normal;
+    font-size: larger;
+}
+
+.button-container {
+    margin-top: -120px;
+    margin-left: 60px;
+    margin-right: 100px;
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: initial;
+    font-weight: 400;
+
+    font-style: normal;
+    font-size: larger;
+    color: white;
+}
+
+
+.inspired {
+    color: white;
+    margin-left: 100px;
+    margin-top: 80px;
+    font-size: medium;
+}
+
+.inspiredby {
+    margin-left: 80px;
+}
+
+
+.box-container {
+    display: flex;
+}
+
+.box1 {
+    width: 50%;
+    height: 580px;
+}
+
+.box2 {
+    width: 50%;
+    height: 300px;
+}
+
+.button3 {
+    background-color: #6e306b;
+    width: 363px;
+    height: 93px;
+    border-radius: 20px;
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: initial;
+    font-weight: 400;
+
+    font-style: normal;
+    font-size: larger;
+
+}
+
+.button4 {
+    background-color: #4eb8a0;
+    width: 363px;
+    height: 93px;
+    border-radius: 20px;
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: initial;
+    font-weight: 400;
+
+    font-style: normal;
+    font-size: larger;
+    margin-top: 20px;
+}
+
+.button-container2 {
+    margin-top: 130px;
+    margin-left: 160px;
+    color: white;
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: initial;
+    font-weight: 600;
+
+    font-style: normal;
+    font-size: 30px;
+
+}
+
+.joinsection {
+    margin-top: 60px;
+    height: 300px;
+}
+
+.button5 {
+    color: white;
+    width: 300px;
+    height: 60px;
+    background-color: #645c7a;
+    border-radius: 34px;
+    border: 1px solid #63FFD0;
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: initial;
+    font-weight: 400;
+
+    font-style: normal;
+    font-size: larger;
+    margin-top: 60px;
+    margin-left: 100px;
+}
+
+.volunteer {
+    margin-left: 60px;
+}
+
+.button6 {
+    color: #ff7324;
+    width: 300px;
+    height: 60px;
+    background-color: #645c7a;
+    border-radius: 34px;
+    border: 1px solid #ff7324;
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: initial;
+    font-weight: 400;
+    margin-top: 25px;
+
+    font-style: normal;
+    font-size: larger;
+    margin-left: 100px;
+
+}
+
+.testimonials {
+    margin-left: 470px;
+    margin-top: 120px;
+}
+
+.testimonials2 {
+    margin-top: -50px;
+    width: 1326px;
+    height: 470px;
+    margin-left: 10px;
+}
+
+
+.bluebox {
+    margin-top: 80px;
+    margin-left: 40px;
+    width: 1260px;
+    height: 490px;
+    position: relative;
+    /* Ensure the container is positioned relative */
+    display: inline-block;
+}
+
+
+.button7 {
+    color: #ffffff;
+    width: 263px;
+    height: 67px;
+    background-color: black;
+    border-radius: 34px;
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: initial;
+    font-weight: 300;
+
+    font-style: normal;
+    font-size: 27px;
+    margin-left: 520px;
+    position: absolute;
+    top: 65%;
+    left: 110px;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+
+}
+
+.footer {
+    background-color: #11053e;
+    width: 100%; /* Changed width to 100% to make it responsive */
+    height: auto; /* Changed height to auto to adjust based on content */
+    padding: 30px; /* Added padding for better spacing */
+    color: white;
+    margin-top: 222px;
+}
+.foot{
+    background-color: #ff5c00;
+height: 20px;
+}
+
+.phone {
+    height: 45px;
+}
+
+.contacts {
+    display: flex;
+    align-items: center;
+    padding: 7px;
+}
+
+.call {
+    margin-top: 20px;
+}
+
+
+
+.divlast {
+    display: flex;
+    justify-content: space-around;
+}
+
+/* Styling for email input field */
+.email-input {
+    margin-top: 20px;
+    margin-left: 200px;
+    
+}
+.button8{
+    background-color: #6e306b;
+    border-radius: 34px;
+    width:121px;
+    height: 55px;
+    border: 1px solid #70DFCB;
+    margin-right: 50px;
+    
+
+}
+
+.email-input input[type="email"] {
+    width: 300px;
+    height: 55px;
+    padding: 10px;
+    border-radius: 34px;
+    border: 1px solid #70DFCB;
+    font-size: 16px;
+    background-color: #281c4e;
+}
+
+.email-input input[type="email"]::placeholder {
+    color: #ccc;
+}
+
+.newsletter{
+    margin-bottom: 50px;
+}
