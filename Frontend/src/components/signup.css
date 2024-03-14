@@ -1,0 +1,190 @@
+.lheader{
+    background-color: #11053e;
+    height:225px;
+    width:1360px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.llogo{
+    margin-left: 40px;
+}
+
+.nav-links a {
+    color: aliceblue;
+    margin-right: 150px;
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: initial;
+    font-weight: 400;
+
+    font-style: normal;
+    font-size: larger;
+
+}
+.lbody {
+    margin: 0;
+    padding: 0;
+    background-image: url("../assets/signupbg.png");
+    width: 1360px;
+    height: 2040px;
+
+}
+.lbox1{
+height: 1081px;
+width:1062px;
+background-color: #9c98ce;
+border:1px solid black;
+margin-left: 135px;
+margin-top: 195px;
+border-radius: 59px;
+display: flex;
+}
+
+.lbox2{
+    background-color: #e3c5be;
+    height:826px;
+    width:400px;
+    margin-top: 130px;
+    margin-left: 50px;
+    border-radius: 40px 0px 0px 40px;
+    
+}
+
+
+.lformbox{
+    background-color: white;
+    height:826px;
+    width:600px;
+    margin-top: 130px;
+    margin-right:50px;
+    border-radius: 0px 50px 50px 0px;
+
+
+}
+
+.createaccount{
+    margin-top: 150px;
+    margin-left: 65px;
+    color: rgb(0, 0, 0);
+    margin-right: 150px;
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: initial;
+    font-weight: 600;
+
+    font-style: normal;
+    font-size: 51px;
+
+}
+label{
+    background-color: #fff;
+    margin-left: 30px;
+    padding: 0px 8px 0px 8px;
+    color: #000000;
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: initial;
+    font-weight: 450;
+
+    font-style: normal;
+}
+
+
+
+.form1 {
+    margin-top: 80px;
+    margin-left: 50px;
+  }
+  
+  .form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin-top: 60px;
+  }
+  
+  .form-group {
+    position: relative;
+    margin-bottom: 50px;
+  }
+  
+  .form-group input {
+    width: 400px;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 10px;
+    outline: none;
+    transition: border-color 0.3s, box-shadow 0.3s;
+  }
+  
+  .form-group input:focus {
+    border-color: #e3c5be;
+    box-shadow: 0 0 10px #e3c5be;
+  }
+  
+  .form-group label {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: #999;
+    pointer-events: none;
+    transition: top 0.3s, left 0.3s, color 0.3s;
+  }
+  
+  .form-group input:focus + label,
+  .form-group input:not(:placeholder-shown) + label {
+    top: -15px;
+    left: 0;
+    color: #000000;
+  }
+  
+  .formbutton {
+    margin-left: 100px;
+    display: block;
+    width: 180px;
+    height: 52px;
+    padding: 10px;
+    color: #fff;
+    border-radius: 14px;
+    border: none;
+    cursor: pointer;
+  }
+  
+
+
+  .img1{
+    margin-top: -850px;
+    margin-left: 150px;
+  }
+
+
+
+  .image-container {
+    margin-left: 20px;
+    position: relative;
+    width: 500px;
+    height: 500px; 
+  }
+  
+  .animated-image {
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: transform 1s ease-in-out; 
+  }
+  
+  .animated-image:hover {
+    transform: translate(-20px, 20px);
+  }
+  
+  .animated-image:hover {
+    animation-name: moveBack;
+    animation-duration: 2s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards; 
+  }
+  
+  @keyframes moveBack {
+    0% { transform: translate(-20px, 20px); }
+    100% { transform: translate(0, 0); } 
+  }
