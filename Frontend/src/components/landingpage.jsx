@@ -9,6 +9,8 @@ import testimonialImage from "../assets/testimonial.png";
 import testimonialImage2 from "../assets/testimonials2.png";
 import bigBoxImage from '../assets/bigbox.png';
 import phoneImage from '../assets/phone.png';
+import { Link } from 'react-router-dom';
+
 
 function LandingPage() {
     return (
@@ -27,7 +29,7 @@ function LandingPage() {
                 <img src={img1} alt="image" />
             </div>
             <div className="button-container">
-                <button className="button1">Sign Up</button>
+                <button className="button1"><Link to="/signup" className="login-btn">Sign Up</Link></button>
                 <button className="button2">Login</button>
             </div>
             <h1 className='inspired'>INSPIRED BY:</h1>
