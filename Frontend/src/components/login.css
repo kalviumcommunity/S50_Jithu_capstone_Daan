@@ -1,82 +1,78 @@
-.lheader{
+.lheader {
     background-color: #11053e;
-    height:225px;
-    width:1360px;
+    height: 225px;
+    width: 1360px;
     display: flex;
     justify-content: space-between;
-    align-items: center;
-
-}
-.llogo{
+    align-items: center; /* Align items vertically center */
+  }
+  
+  .llogo {
     margin-left: 40px;
-}
-
-.nav-links a {
+  }
+  
+  .nav-links a {
     color: aliceblue;
     margin-right: 150px;
     font-family: "Outfit", sans-serif;
     font-optical-sizing: initial;
     font-weight: 400;
-
     font-style: normal;
     font-size: larger;
-
-}
-.lbody {
+  }
+  
+  .llbody {
     margin: 0;
     padding: 0;
-    background-image: url("../assets/signupbg.png");
+    background-image: url("../assets/loginbg.png");
     width: 1360px;
-    height: 2040px;
-
-}
-.lbox1{
-height: 1081px;
-width:1062px;
-background-color: #9c98ce;
-border:1px solid black;
-margin-left: 135px;
-margin-top: 195px;
-border-radius: 59px;
-display: flex;
-}
-
-.lbox2{
-    background-color: #e3c5be;
-    height:826px;
-    width:400px;
-    margin-top: 130px;
+    height: 1640px;
+  }
+  
+  .llbox1 {
+    height: 700px;
+    width: 700px;
+    background-color: #d2ab96;
+    border: 1px solid black;
+    margin-left: 300px;
+    margin-top: 195px;
+    border-radius: 49px;
+    display: flex;
+  }
+  
+  .llbox2 {
+    background-color: #bb5943;
+    height: 500px;
+    width: 300px;
+    margin-top:90px;
     margin-left: 50px;
     border-radius: 40px 0px 0px 40px;
-    
-}
-
-
-.lformbox{
+  }
+  
+  .lformbox {
     background-color: white;
-    height:826px;
-    width:600px;
-    margin-top: 130px;
-    margin-right:50px;
+    height: 500px;
+    width: 360px;
+    margin-top: 90px;
+    margin-right: 50px;
     border-radius: 0px 50px 50px 0px;
-
-
-}
-
-.createaccount{
-    margin-top: 150px;
-    margin-left: 65px;
+  }
+  
+  .createaccount {
+    margin-top: 60px;
+    margin-left: 110px;
     color: rgb(0, 0, 0);
     margin-right: 150px;
     font-family: "Outfit", sans-serif;
     font-optical-sizing: initial;
-    font-weight: 600;
-
+    font-weight: 500;
     font-style: normal;
-    font-size: 51px;
+    font-size: 41px;
 
-}
-label{
+
+  }
+  
+  label {
     background-color: #fff;
     margin-left: 30px;
     padding: 0px 8px 0px 8px;
@@ -84,13 +80,10 @@ label{
     font-family: "Outfit", sans-serif;
     font-optical-sizing: initial;
     font-weight: 450;
-
     font-style: normal;
-}
-
-
-
-.form1 {
+  }
+  
+  .form1 {
     margin-top: 80px;
     margin-left: 50px;
   }
@@ -100,7 +93,7 @@ label{
     justify-content: center;
     align-items: center;
     height: 100vh;
-    margin-top: 60px;
+    margin-top: 10px;
   }
   
   .form-group {
@@ -109,7 +102,7 @@ label{
   }
   
   .form-group input {
-    width: 400px;
+    width: 270px;
     padding: 10px;
     border: 1px solid black;
     border-radius: 10px;
@@ -139,9 +132,9 @@ label{
   }
   
   .formbutton {
-    margin-left: 100px;
+    margin-left: 50px;
     display: block;
-    width: 180px;
+    width: 150px;
     height: 52px;
     padding: 10px;
     color: #fff;
@@ -150,27 +143,24 @@ label{
     cursor: pointer;
   }
   
-
-
-  .img1{
+  .img1 {
     margin-top: -850px;
     margin-left: 150px;
   }
-
-
-
+  
   .image-container {
     margin-left: 20px;
     position: relative;
-    width: 500px;
-    height: 500px; 
+    width: 350px;
+    height: 350px;
   }
   
   .animated-image {
     position: absolute;
-    left: 0;
-    top: 0;
-    transition: transform 1s ease-in-out; 
+    left: 150px;
+    top: 280px;
+    transition: transform 1s ease-in-out;
+    /* filter:drop-shadow(10px 7px 10px orange); */
   }
   
   .animated-image:hover {
@@ -181,20 +171,29 @@ label{
     animation-name: moveBack;
     animation-duration: 2s;
     animation-delay: 1s;
-    animation-fill-mode: forwards; 
+    animation-fill-mode: forwards;
   }
   
   @keyframes moveBack {
-    0% { transform: translate(-20px, 20px); }
-    100% { transform: translate(0, 0); } 
+    0% {
+      transform: translate(-20px, 20px);
+    }
+    100% {
+      transform: translate(0, 0);
+    }
   }
-
-
-  .success-message{
+  
+  .success-message {
     color: #e3c5be;
   }
-
-  .thumbs{
-    height:300px;
-    width:300px
+  
+  .thumbs {
+    height: 300px;
+    width: 300px;
   }
+  
+
+
+
+
+

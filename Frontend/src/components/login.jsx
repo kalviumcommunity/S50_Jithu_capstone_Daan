@@ -1,21 +1,13 @@
 import React, { useState } from 'react';
-import './signup.css';
+import './login.css';
 import logo from "../assets/logo.png";
-import image1 from "../assets/image1.png";
-import image2 from "../assets/image2.png";
+import image1 from "../assets/image4.png";
 import axios from 'axios'; 
 
-export default function Signup() {
-    const [username, setUsername] = useState('');
+export default function Login() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    const [successMessage, setSuccessMessage] = useState('');
     const [errorMessage, setErrorMessage] = useState('');
-    const [showImage, setShowImage] = useState(false);
-
-    const handleUsernameChange = (event) => {
-        setUsername(event.target.value);
-    };
 
     const handleEmailChange = (event) => {
         setEmail(event.target.value);
@@ -29,38 +21,24 @@ export default function Signup() {
         event.preventDefault();
         
         try {
-            const response = await axios.post('http://localhost:4000/users', {
-                username: username,
+            const response = await axios.post('http://localhost:4000/users/login', {
                 email: email,
                 password: password
             });
             
-            if (response.status === 201) {
-                setSuccessMessage('Form submitted successfully.');
-                setErrorMessage('');
-                setShowImage(true);
+            // Check if login was successful
+            console.log('Login response:', response.data);
+            setErrorMessage(''); // Clear any previous error messages
 
-                // Navigate to mainpage.jsx after 4 seconds
-                setTimeout(() => {
-                    // Redirect to mainpage.jsx
-                    window.location.href = '/mainpage';
-                }, 4000);
-            } else {
-                setErrorMessage('Error submitting form. Please try again later.');
-                setSuccessMessage('');
-            }
-
-            console.log('Form submitted:', response.data);
         } catch (error) {
-            console.error('Error submitting form:', error);
-            setErrorMessage('Error submitting form. Please try again later.');
-            setSuccessMessage('');
+            console.error('Error logging in:', error.response.data.error);
+            setErrorMessage(error.response.data.error || 'Error logging in. Please try again later.');
         }
     };
 
     return (
         <div>
-            <div className='lbody'>
+            <div className='llbody'>
                 <div className='lheader'>
                     <div className='llogo'><img src={logo} alt="Logo" /></div>
                     <nav className="nav-links">
@@ -69,20 +47,11 @@ export default function Signup() {
                         <a href="#join">Join Us</a>
                     </nav>
                 </div>
-                <div className='lbox1'>
-                    <div className='lbox2'></div>
+                <div className='llbox1'>
+                    <div className='llbox2'></div>
                     <div className='lformbox'>
-                        <h1 className='createaccount'>Create Account</h1>
+                        <h1 className='createaccount'>Login</h1>
                         <form className="form1" onSubmit={handleSubmit}>
-                            <div className='form-group'>
-                                <input
-                                    type="text"
-                                    value={username}
-                                    onChange={handleUsernameChange}
-                                    required
-                                />
-                                <label>Username</label>
-                            </div>
                             <div className='form-group'>
                                 <input
                                     type="email"
@@ -101,10 +70,8 @@ export default function Signup() {
                                 />
                                 <label>Password</label>
                             </div>
-                            <button className="formbutton bg-black" type="submit">Submit</button>
+                            <button className="formbutton bg-black" type="submit">Login</button>
                         </form>
-                        {successMessage && <div className="success-message">{successMessage}</div>}
-                        {showImage && <img classname="thumbs" src={image2} alt="Success Image" />}
                         {errorMessage && <div className="error-message">{errorMessage}</div>}
                     </div>
                 </div>
