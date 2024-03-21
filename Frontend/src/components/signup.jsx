@@ -3,7 +3,7 @@ import './signup.css';
 import logo from "../assets/logo.png";
 import image1 from "../assets/image1.png";
 import image2 from "../assets/image2.png";
-import axios from 'axios'; 
+import axios from 'axios';
 import { Link } from 'react-router-dom';
 
 export default function Signup() {
@@ -28,14 +28,14 @@ export default function Signup() {
 
     const handleSubmit = async (event) => {
         event.preventDefault();
-        
+
         try {
             const response = await axios.post('http://localhost:4000/users', {
                 username: username,
                 email: email,
                 password: password
             });
-            
+
             if (response.status === 201) {
                 setSuccessMessage('Form submitted successfully.');
                 setErrorMessage('');
@@ -65,12 +65,12 @@ export default function Signup() {
                 <div className='lheader'>
                     <div className='llogo'><img src={logo} alt="Logo" /></div>
                     <nav className="nav-links">
-      
-        <Link to="/about" className="login-btn"> About</Link>
-        <Link to="/about" className="login-btn"> About</Link>
-        <Link to="/about" className="login-btn"> About</Link>
-                   
-                </nav>
+
+                        <Link to="/about" className="login-btn"> About</Link>
+                        <Link to="/about" className="login-btn"> About</Link>
+                        <Link to="/about" className="login-btn"> About</Link>
+
+                    </nav>
                 </div>
                 <div className='llbox1'>
                     <div className='lbox2'></div>
