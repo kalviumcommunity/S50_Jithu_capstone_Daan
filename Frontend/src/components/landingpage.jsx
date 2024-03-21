@@ -20,9 +20,11 @@ function LandingPage() {
                     <img src={logo} alt="Logo" />
                 </div>
                 <nav className="nav-links">
-                    <a href="#about">About</a>
-                    <a href="#contact">Contact Us</a>
-                    <a href="#join">Join Us</a>
+      
+        <Link to="/about" className="login-btn"> About</Link>
+        <Link to="/about" className="login-btn"> About</Link>
+        <Link to="/about" className="login-btn"> About</Link>
+                   
                 </nav>
             </div>
             <div className='image1'>
@@ -30,7 +32,7 @@ function LandingPage() {
             </div>
             <div className="button-container">
                 <button className="button1"><Link to="/signup" className="login-btn">Sign Up</Link></button>
-                <button className="button2">Login</button>
+                <button className="button2"><Link to="/login" className="login-btn">Log In</Link></button>
             </div>
             <h1 className='inspired'>INSPIRED BY:</h1>
             <div className='inspiredby'>
