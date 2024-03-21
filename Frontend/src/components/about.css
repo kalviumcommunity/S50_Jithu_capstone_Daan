@@ -1,0 +1,151 @@
+
+
+
+.violetbg{
+    height: 900px;
+    width:1380px;
+    background-image: url("../assets/aboutbg.png");
+}
+
+.about-container {
+    position: relative;
+    height:3000px;
+    background-color: #FFFFF0;
+  }
+  
+  .aboutflex {
+    display: flex;
+    /* Add your flex styles here */
+  }
+
+  
+  .image-overlay {
+    position: absolute;
+    width: 1040px;
+    height: 760px;
+    margin-top: -830px;
+    margin-left: 155px;
+  }
+  
+  .image-overlay img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* This ensures the image covers the div */
+  }
+
+
+  .aboutus{
+    background-image: url("../assets/aboutusl.png");
+    height: 80px;
+    width: 208px;
+    margin-top: 0px;
+    margin-left: 300px;
+  }
+
+  .kalviumimg{
+    background-image: url("../assets/kalviumpic.png");
+    height: 350px;
+    width: 475px;
+    margin-top: 50px;
+    margin-left: 150px;
+  }
+
+
+  .knowabout{
+    background-image: url("../assets/knowabout.png");
+    height: 700px;
+    width: 500px;
+    margin-top: 50px;
+    margin-right:100px; 
+    border-radius: 15px;
+  }
+
+  .abflex{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .break{
+    height:10px;
+    width:1350px;
+    background-color: #FF5C00;
+  }
+
+
+  .professionals{
+    background-image: url("../assets/abprof.png");
+    height: 300px;
+    width: 440px;
+    margin-top: 150px;
+    margin-left: 430px;
+  }
+  .professionalspic {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    overflow: hidden;
+}
+
+
+.professional1,
+.professional2,
+.professional3 {
+    /* Adjust the height as needed */
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    margin-top: 230px;
+}
+
+.professional1 {
+    background-image: url("../assets/prof1.png"); 
+    margin-right: 900px;
+    width: 385px; /* Adjust the width as needed */
+    height: 449px;
+}
+
+.professional2 {
+    background-image: url("../assets/prof2.png");
+    margin-right: 70px;
+    width: 400px; /* Adjust the width as needed */
+    height: 449px;
+
+  
+ 
+}
+
+.professional3 {
+    background-image: url("../assets/prof3.png");
+    margin-left: 800px;
+    width: 385px; /* Adjust the width as needed */
+    height: 459px;
+
+
+}
+
+@keyframes carousel {
+    0% {
+        transform: translateX(0%);
+    }
+    33.33% {
+        transform: translateX(-100%);
+    }
+    66.67% {
+        transform: translateX(-200%);
+    }
+    100% {
+        transform: translateX(-300%);
+    }
+}
+
+
+.footerl{
+    background-color: #11053e;
+    width: 100%; /* Changed width to 100% to make it responsive */
+    height: auto; /* Changed height to auto to adjust based on content */
+    padding: 30px; /* Added padding for better spacing */
+    color: white;
+    margin-top: 502px;
+}

@@ -47,7 +47,7 @@ export default function Login() {
                         <a href="#join">Join Us</a>
                     </nav>
                 </div>
-                <div className='llbox1'>
+                <div className='lbox1'>
                     <div className='llbox2'></div>
                     <div className='lformbox'>
                         <h1 className='createaccount'>Login</h1>

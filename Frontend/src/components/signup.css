@@ -1,6 +1,6 @@
 .lheader{
     background-color: #11053e;
-    height:225px;
+    height:180px;
     width:1360px;
     display: flex;
     justify-content: space-between;
@@ -9,17 +9,20 @@
 }
 .llogo{
     margin-left: 40px;
+    margin-bottom: 30px;
 }
 
 .nav-links a {
     color: aliceblue;
     margin-right: 150px;
+ 
     font-family: "Outfit", sans-serif;
     font-optical-sizing: initial;
     font-weight: 400;
 
     font-style: normal;
     font-size: larger;
+   
 
 }
 .lbody {
@@ -27,53 +30,53 @@
     padding: 0;
     background-image: url("../assets/signupbg.png");
     width: 1360px;
-    height: 2040px;
+    height: 1600px;
 
 }
-.lbox1{
-height: 1081px;
-width:1062px;
-background-color: #9c98ce;
-border:1px solid black;
-margin-left: 135px;
-margin-top: 195px;
-border-radius: 59px;
-display: flex;
+.llbox1{
+height: 800px;
+    width: 700px;
+    background-color: #8F89AC;
+    border: 1px solid black;
+    margin-left: 300px;
+    margin-top: 205px;
+    border-radius: 49px;
+    display: flex;
 }
 
 .lbox2{
-    background-color: #e3c5be;
-    height:826px;
-    width:400px;
-    margin-top: 130px;
+    background-color: #d2ab96;
+    height: 600px;
+    width: 300px;
+    margin-top:90px;
     margin-left: 50px;
     border-radius: 40px 0px 0px 40px;
+    box-shadow:  10px 7px 20px #FFFFFF;
     
 }
 
 
-.lformbox{
+.formbox{
     background-color: white;
-    height:826px;
-    width:600px;
-    margin-top: 130px;
-    margin-right:50px;
+    height: 600px;
+    width: 360px;
+    margin-top: 90px;
+    margin-right: 50px;
     border-radius: 0px 50px 50px 0px;
-
+      box-shadow:  10px 7px 20px orange;
 
 }
 
-.createaccount{
-    margin-top: 150px;
-    margin-left: 65px;
-    color: rgb(0, 0, 0);
-    margin-right: 150px;
-    font-family: "Outfit", sans-serif;
-    font-optical-sizing: initial;
-    font-weight: 600;
-
-    font-style: normal;
-    font-size: 51px;
+.lcreateaccount{
+  margin-top: 70px;
+  margin-left: -130px;
+  color: rgb(0, 0, 0);
+  margin-right: 150px;
+  font-family: "Outfit", sans-serif;
+  font-optical-sizing: initial;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 41px;
 
 }
 label{
@@ -90,9 +93,9 @@ label{
 
 
 
-.form1 {
-    margin-top: 80px;
-    margin-left: 50px;
+.lform1 {
+    margin-top: 60px;
+    margin-left: 30px;
   }
   
   .form-container {
@@ -152,9 +155,9 @@ label{
   
 
 
-  .img1{
-    margin-top: -850px;
-    margin-left: 150px;
+  .limg1{
+    margin-top:-850px;
+    margin-left: 170px;
   }
 
 

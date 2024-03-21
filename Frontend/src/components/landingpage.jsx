@@ -20,9 +20,11 @@ function LandingPage() {
                     <img src={logo} alt="Logo" />
                 </div>
                 <nav className="nav-links">
-                    <a href="#about">Abxxout</a>
-                    <a href="#contact">Contact Us</a>
-                    <a href="#join">Join Us</a>
+      
+        <Link to="/about" className="login-btn"> About</Link>
+        <Link to="/about" className="login-btn"> About</Link>
+        <Link to="/about" className="login-btn"> About</Link>
+                   
                 </nav>
             </div>
             <div className='image1'>
