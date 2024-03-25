@@ -1,6 +1,6 @@
 .lheader{
     background-color: #11053e;
-    height:180px;
+    height:100px;
     width:1360px;
     display: flex;
     justify-content: space-between;
@@ -28,42 +28,41 @@
 .lbody {
     margin: 0;
     padding: 0;
-    background-image: url("../assets/signupbg.png");
+    /* background-image: url("../assets/signupbg.png"); */
     width: 1360px;
-    height: 1600px;
+    height: 1370px;
+    background-color: #f0f0f0;
 
 }
 .llbox1{
 height: 800px;
     width: 700px;
-    background-color: #8F89AC;
-    border: 1px solid black;
+    background-color: #9c96cb;
+    border: 1px solid rgb(178, 18, 18);
     margin-left: 300px;
-    margin-top: 205px;
+    margin-top: 100px;
     border-radius: 49px;
     display: flex;
 }
 
 .lbox2{
-    background-color: #d2ab96;
+    background-color: #3c1971;
     height: 600px;
     width: 300px;
     margin-top:90px;
     margin-left: 50px;
     border-radius: 40px 0px 0px 40px;
-    box-shadow:  10px 7px 20px #FFFFFF;
     
 }
 
 
 .formbox{
-    background-color: white;
+    background-color: #ffffff;
     height: 600px;
     width: 360px;
     margin-top: 90px;
     margin-right: 50px;
     border-radius: 0px 50px 50px 0px;
-      box-shadow:  10px 7px 20px orange;
 
 }
 

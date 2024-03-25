@@ -101,14 +101,14 @@
 
 .professional1 {
     background-image: url("../assets/prof1.png"); 
-    margin-right: 900px;
+    margin-right: 890px;
     width: 385px; /* Adjust the width as needed */
     height: 449px;
 }
 
 .professional2 {
     background-image: url("../assets/prof2.png");
-    margin-right: 70px;
+    margin-right: 0px;
     width: 400px; /* Adjust the width as needed */
     height: 449px;
 
@@ -118,7 +118,7 @@
 
 .professional3 {
     background-image: url("../assets/prof3.png");
-    margin-left: 800px;
+    margin-left: 890px;
     width: 385px; /* Adjust the width as needed */
     height: 459px;
 

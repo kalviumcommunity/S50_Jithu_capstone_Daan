@@ -1,6 +1,6 @@
 .lheader {
     background-color: #11053e;
-    height: 225px;
+    height: 125px;
     width: 1360px;
     display: flex;
     justify-content: space-between;
@@ -24,7 +24,8 @@
   .llbody {
     margin: 0;
     padding: 0;
-    background-image: url("../assets/loginbg.png");
+    /* background-image: url("../assets/loginbg.png"); */
+    background-color: #F0F0F0;
     width: 1360px;
     height: 1640px;
   }
@@ -32,7 +33,7 @@
   .lbox1 {
     height: 700px;
     width: 700px;
-    background-color: #d2ab96;
+    background-color: #9c96cb;
     border: 1px solid black;
     margin-left: 300px;
     margin-top: 195px;
@@ -42,13 +43,12 @@
   }
   
   .llbox2 {
-    background-color: #bf563e;
+    background-color: #11053e;
     height: 500px;
     width: 300px;
     margin-top:90px;
     margin-left: 50px;
     border-radius: 40px 0px 0px 40px;
-    box-shadow:  10px 7px 20px #FFFFFF;
   }
   
   .lformbox {
@@ -59,7 +59,6 @@
     margin-right: 50px;
     border-radius: 0px 50px 50px 0px;
     
-    box-shadow:  10px 7px 20px orange;
   }
   
   .createaccount {
