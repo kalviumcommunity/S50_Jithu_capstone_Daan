@@ -20,11 +20,11 @@ function LandingPage() {
                     <img src={logo} alt="Logo" />
                 </div>
                 <nav className="nav-links">
-      
-        <Link to="/about" className="login-btn"> About</Link>
-        <Link to="/about" className="login-btn"> About</Link>
-        <Link to="/about" className="login-btn"> About</Link>
-                   
+
+                    <Link to="/about" className="login-btn"> About</Link>
+                    <Link to="/about" className="login-btn"> About</Link>
+                    <Link to="/about" className="login-btn"> About</Link>
+
                 </nav>
             </div>
             <div className='image1'>
@@ -43,7 +43,7 @@ function LandingPage() {
             <div className="box-container">
                 <div className="box1">
                     <div className="button-container2">
-                        <div><button className="button3">How It Works?</button></div>
+                        <div><button className="button3"><Link to="/hiw">How It Work's</Link></button></div>
                         <div> <button className="button4">Community Events!!</button></div>
                     </div>
                 </div>
@@ -61,7 +61,8 @@ function LandingPage() {
             <div className='testimonials2'><img src={testimonialImage2} alt="testimonials2" /></div>
             <div className='bluebox'>
                 <img className='blueboximage' src={bigBoxImage} alt="bluebox" />
-                <button className='button7'>Get Started</button>
+                {/* <button className='button7'>Get Started</button> */}
+                <button className="button7"><Link to="/mainpage">Get Started</Link></button>
             </div>
 
             <div className='footer'>
@@ -97,7 +98,7 @@ function LandingPage() {
                         <div className='contacts'>
                             <p>Sign In</p>
                         </div>
-                        <div className='contacts'> 
+                        <div className='contacts'>
                             <p>Get Started</p>
                         </div>
                     </div>
@@ -108,7 +109,7 @@ function LandingPage() {
                         <button className='button8'>Submit</button>
                     </div>
                 </div>
-               
+
             </div>
             <div className='foot'></div>
         </div>

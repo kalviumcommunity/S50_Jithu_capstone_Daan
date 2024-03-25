@@ -1,0 +1,44 @@
+.mheader {
+    background-color: #11053e;
+    height: 50px; /* Adjusted height */
+    width: 1000px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 20px;
+    margin-top: 30px;
+    margin-left: 160px;
+    padding: 0px 20px 0px 20px ;/* Adjusted padding */
+  
+}
+
+.mlogo {
+    height: 80px;
+    width: 80px;
+    margin-left: 20px;
+    margin-top: 27px;
+}
+
+.mlogin-btn {
+    color: white;
+    padding:  20px; /* Adjusted padding */
+    margin-top: -5px;
+}
+
+.mnav-links {
+    font-weight: bold;
+    font-size: 19px;
+}
+
+.mnav-links a {
+    color: rgb(255, 255, 255);
+    margin-right: 20px; /* Adjusted margin */
+    font-family: "Outfit", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+}
+
+.searchbox{
+    height: 400px;
+}

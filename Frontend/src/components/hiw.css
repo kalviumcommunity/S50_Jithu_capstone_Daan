@@ -1,0 +1,100 @@
+.hbody {
+    background-image: url("../assets/hiwbg.png");
+    height: 950px;
+    width: 1360px;
+}
+
+.hiwheading {
+    color: #e6e6e6;
+    font-size: 30px;
+    font-weight: 500;
+    margin-left: 530px;
+    margin-top: 70px;
+}
+
+.Daan {
+    color: #3c2d77;
+}
+
+.hiwtitle1 {
+    margin-left: 250px;
+    margin-top: 50px;
+    width: 100%;
+}
+
+.hiwtitle2 {
+    margin-left: 70px;
+    margin-top: 50px;
+}
+
+.hiwbody {
+    height: 2020px;
+    overflow: hidden;
+    /* background-color: rgb(255, 255, 255); */
+}
+
+.donationsection {
+    margin-left: 230px;
+    margin-top: 50px;
+}
+
+.dtitle {
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: initial;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 30px;
+    margin-top: 50px;
+    margin-left: 90px;
+    color: #48137d;
+}
+
+.dpara {
+    width: 631px;
+    height: 238px;
+    margin-left: 80px;
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: initial;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 20px;
+    margin-top: 30px;
+}
+
+.dbutton {
+    height: 60px;
+    width: 200px;
+    border-radius: 7px;
+    color: white;
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: initial;
+    font-weight: 500;
+    margin-left: 280px;
+    font-style: normal;
+    font-size: 30px;
+}
+
+.dflex {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.dimage {
+    height: 430px;
+    width: 600px;
+    margin-top: 100px;
+}
+
+.dfooterl {
+    background-color: #11053e;
+    width: 100%;
+    padding: 30px;
+    color: white;
+    position: absolute;
+    bottom: 0;
+}
+.dfoot{
+    background-color: #ff5c00;
+}
+
