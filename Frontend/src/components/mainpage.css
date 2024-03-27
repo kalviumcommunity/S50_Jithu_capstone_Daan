@@ -1,22 +1,63 @@
 .mheader {
-    background-color: #11053e;
-    height: 50px; /* Adjusted height */
-    width: 1000px;
+    background-color: #3f3f3f;
+    height: 70px; /* Adjusted height */
+    width: 1360px;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
-    border-radius: 20px;
-    margin-top: 30px;
-    margin-left: 160px;
-    padding: 0px 20px 0px 20px ;/* Adjusted padding */
+  
+ 
+  
+    padding: 15px 0px 0px 20px ;/* Adjusted padding */
   
 }
 
+.menu-page{
+    height:300px;
+    background-color:#202120;
+    width:300px;
+    border-radius: 0px 0px 20px 0px;
+
+}
+
+
+.mainnav-links{
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: initial;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    color: white;
+}
+
+.mainlogin-btn{
+    margin-top: 40px;
+    margin-left: 100px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .mlogo {
-    height: 80px;
-    width: 80px;
-    margin-left: 20px;
-    margin-top: 27px;
+    height: 120px;
+    width: 120px;
+    margin-left: 27%;
+    margin-top: 35px;
+    filter:drop-shadow(10px 7px 10px rgb(0, 0, 0));
 }
 
 .mlogin-btn {
@@ -39,6 +80,129 @@
     font-size: 20px;
 }
 
-.searchbox{
-    height: 400px;
+
+.customercare{
+    height: 35px;
+    margin-right: 20px;
 }
+
+.chatimage{
+    height:35px;
+    margin-left: 250px;
+}
+.hamburg{
+    height:30px;
+    margin-bottom: 24px;
+    padding: 5px 5px 10px 5px;
+
+}
+
+.menu{
+    color: white;
+    display: flex;
+  margin-left: 20px;
+  margin-top: -5px;
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: initial;
+    font-weight: 400;
+
+    font-style: normal;
+    font-size: larger;
+  
+   
+}
+
+.hambflex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.mainpagebg{
+    background-image: url("../assets/mainpagebg.png");
+    height:4900px;
+    width:1360px;
+}
+
+.donate-btn {
+    height: 50px;
+    width: 154px;
+    background-color: red;
+    border: 1px solid red;
+    opacity: 0.8;
+    color: white;
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: initial;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 20px;
+    margin-top: 1440px;
+    margin-left: 200px;
+    border-radius: 50px;
+    border:1px solid red;
+}
+
+.donate-btn button {
+    border: none; /* Remove default button border */
+    background: none; /* Remove default button background */
+    color: inherit; /* Inherit text color from parent */
+    font: inherit; /* Inherit font styles from parent */
+    cursor: pointer; /* Add pointer cursor on hover */
+    padding-top: 7px; 
+    padding-left: 40px;
+    padding-bottom: 0px;/* Remove default button padding */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.menu-sections {
+    justify-content: space-around;
+    margin-top: 400px;
+}
+
+.menu-section {
+    padding-top: 80px;
+    display: flex;
+    justify-content: space-around; 
+    margin-top: 80px;
+    
+}
+
+.menu-box {
+    width: 255px;
+    height: 353px;
+    background-color: white;
+    margin-right: 20px;
+    border-radius: 20px;
+}
+
+
+.menu-title{
+    background-color: black;
+    border-radius: 0px 0px 20px 20px;
+    width: 255px;
+    height: 213px;
+    margin-top: 140px;
+}
+
+
