@@ -5,6 +5,8 @@ import image1 from "../assets/image11.png";
 import image2 from "../assets/image2.png";
 import axios from 'axios';
 import { Link } from 'react-router-dom';
+import google from "../assets/google.png";
+
 
 export default function Signup() {
     const [username, setUsername] = useState('');
@@ -13,6 +15,7 @@ export default function Signup() {
     const [successMessage, setSuccessMessage] = useState('');
     const [errorMessage, setErrorMessage] = useState('');
     const [showImage, setShowImage] = useState(false);
+    const [googleBtnClass, setGoogleBtnClass] = useState('');
 
     const handleUsernameChange = (event) => {
         setUsername(event.target.value);
@@ -24,6 +27,11 @@ export default function Signup() {
 
     const handlePasswordChange = (event) => {
         setPassword(event.target.value);
+    };
+
+    const handleGoogleClick = () => {
+        // setGoogleBtnClass('google-btn-clicked');
+        window.location.href="http://localhost:4000/auth/google"
     };
 
     const handleSubmit = async (event) => {
@@ -65,17 +73,28 @@ export default function Signup() {
                 <div className='lheader'>
                     <div className='llogo'><img src={logo} alt="Logo" /></div>
                     <nav className="nav-links">
-
                         <Link to="/about" className="login-btn"> About</Link>
                         <Link to="/about" className="login-btn"> About</Link>
                         <Link to="/about" className="login-btn"> About</Link>
-
                     </nav>
                 </div>
                 <div className='llbox1'>
                     <div className='lbox2'></div>
                     <div className='formbox'>
                         <h1 className='lcreateaccount'>Create Account</h1>
+                      <div className='googlecontainer'>
+  <button className={`google-signup-btn ${googleBtnClass}`} onClick={handleGoogleClick}>
+    <div className='googleflex'>
+  <div >
+    <img src={google} className='googlebtn' alt="Google Logo"/>
+    </div>
+    <div>
+    <h1 className="googletxt">Sign Up With Google</h1>
+    </div>
+     </div>
+  </button>
+</div>
+
                         <form className="lform1" onSubmit={handleSubmit}>
                             <div className='form-group'>
                                 <input

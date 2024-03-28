@@ -3,6 +3,7 @@ import './login.css';
 import logo from "../assets/logo.png";
 import image1 from "../assets/image4.png";
 import axios from 'axios'; 
+import google from "../assets/google.png";
 
 export default function Login() {
     const [email, setEmail] = useState('');
@@ -51,6 +52,14 @@ export default function Login() {
                     <div className='llbox2'></div>
                     <div className='lformbox'>
                         <h1 className='createaccount'>Login</h1>
+                        <div className='googleflex'>
+  <div >
+    <img src={google} className='googlebtn' alt="Google Logo"/>
+    </div>
+    <div>
+    <h1 className="googletxt">Sign Up With Google</h1>
+    </div>
+    </div>
                         <form className="form1" onSubmit={handleSubmit}>
                             <div className='form-group'>
                                 <input
