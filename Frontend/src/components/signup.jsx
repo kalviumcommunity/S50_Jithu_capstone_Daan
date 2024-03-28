@@ -7,7 +7,6 @@ import axios from 'axios';
 import { Link } from 'react-router-dom';
 import google from "../assets/google.png";
 
-
 export default function Signup() {
     const [username, setUsername] = useState('');
     const [email, setEmail] = useState('');
@@ -15,7 +14,6 @@ export default function Signup() {
     const [successMessage, setSuccessMessage] = useState('');
     const [errorMessage, setErrorMessage] = useState('');
     const [showImage, setShowImage] = useState(false);
-    const [googleBtnClass, setGoogleBtnClass] = useState('');
 
     const handleUsernameChange = (event) => {
         setUsername(event.target.value);
@@ -27,11 +25,6 @@ export default function Signup() {
 
     const handlePasswordChange = (event) => {
         setPassword(event.target.value);
-    };
-
-    const handleGoogleClick = () => {
-        // setGoogleBtnClass('google-btn-clicked');
-        window.location.href="http://localhost:4000/auth/google"
     };
 
     const handleSubmit = async (event) => {
@@ -49,9 +42,7 @@ export default function Signup() {
                 setErrorMessage('');
                 setShowImage(true);
 
-                // Navigate to mainpage.jsx after 4 seconds
                 setTimeout(() => {
-                    // Redirect to mainpage.jsx
                     window.location.href = '/mainpage';
                 }, 4000);
             } else {
@@ -67,72 +58,73 @@ export default function Signup() {
         }
     };
 
-    return (
-        <div>
-            <div className='lbody'>
-                <div className='lheader'>
-                    <div className='llogo'><img src={logo} alt="Logo" /></div>
-                    <nav className="nav-links">
-                        <Link to="/about" className="login-btn"> About</Link>
-                        <Link to="/about" className="login-btn"> About</Link>
-                        <Link to="/about" className="login-btn"> About</Link>
-                    </nav>
-                </div>
-                <div className='llbox1'>
-                    <div className='lbox2'></div>
-                    <div className='formbox'>
-                        <h1 className='lcreateaccount'>Create Account</h1>
-                      <div className='googlecontainer'>
-  <button className={`google-signup-btn ${googleBtnClass}`} onClick={handleGoogleClick}>
-    <div className='googleflex'>
-  <div >
-    <img src={google} className='googlebtn' alt="Google Logo"/>
-    </div>
-    <div>
-    <h1 className="googletxt">Sign Up With Google</h1>
-    </div>
-     </div>
-  </button>
-</div>
+    const handleGoogleClick = () => {
+        window.location.href = "http://localhost:4000/auth/google";
+    };
 
-                        <form className="lform1" onSubmit={handleSubmit}>
-                            <div className='form-group'>
-                                <input
-                                    type="text"
-                                    value={username}
-                                    onChange={handleUsernameChange}
-                                    required
-                                />
-                                <label>Username</label>
+    return (
+        <div className='lbody'>
+            <div className='lheader'>
+                <div className='llogo'><img src={logo} alt="Logo" /></div>
+                <nav className="nav-links">
+                    <Link to="/about" className="login-btn"> About</Link>
+                    <Link to="/about" className="login-btn"> About</Link>
+                    <Link to="/about" className="login-btn"> About</Link>
+                </nav>
+            </div>
+            <div className='llbox1'>
+                <div className='lbox2'></div>
+                <div className='formbox'>
+                    <h1 className='lcreateaccount'>Create Account</h1>
+                    <div className='googlecontainer'>
+                        <button className="google-signup-btn" onClick={handleGoogleClick}>
+                            <div className='googleflex'>
+                                <div>
+                                    <img src={google} className='googlebtn' alt="Google Logo" />
+                                </div>
+                                <div>
+                                    <h1 className="googletxt">Sign Up With Google</h1>
+                                </div>
                             </div>
-                            <div className='form-group'>
-                                <input
-                                    type="email"
-                                    value={email}
-                                    onChange={handleEmailChange}
-                                    required
-                                />
-                                <label>Email</label>
-                            </div>
-                            <div className='form-group'>
-                                <input
-                                    type="password"
-                                    value={password}
-                                    onChange={handlePasswordChange}
-                                    required
-                                />
-                                <label>Password</label>
-                            </div>
-                            <button className="formbutton bg-black" type="submit">Submit</button>
-                        </form>
-                        {successMessage && <div className="success-message">{successMessage}</div>}
-                        {showImage && <img classname="thumbs" src={image2} alt="Success Image" />}
-                        {errorMessage && <div className="error-message">{errorMessage}</div>}
+                        </button>
                     </div>
+                    <form className="lform1" onSubmit={handleSubmit}>
+                        <div className='form-group'>
+                            <input
+                                type="text"
+                                value={username}
+                                onChange={handleUsernameChange}
+                                required
+                            />
+                            <label>Username</label>
+                        </div>
+                        <div className='form-group'>
+                            <input
+                                type="email"
+                                value={email}
+                                onChange={handleEmailChange}
+                                required
+                            />
+                            <label>Email</label>
+                        </div>
+                        <div className='form-group'>
+                            <input
+                                type="password"
+                                value={password}
+                                onChange={handlePasswordChange}
+                                required
+                            />
+                            <label>Password</label>
+                        </div>
+                        <button className="formbutton bg-black" type="submit">Submit</button>
+                    </form>
+                    {successMessage && <div className="success-message">{successMessage}</div>}
+                    {showImage && <img className="thumbs" src={image2} alt="Success Image" />}
+                    {errorMessage && <div className="error-message">{errorMessage}</div>}
                 </div>
-                <div className='image-container'>
-                    <img className='limg1 animated-image' src={image1} alt="Image" />
-                </div>
+            </div>
+            <div className='image-container'>
+                <img className='limg1 animated-image' src={image1} alt="Image" />
             </div>
         </div>
     );

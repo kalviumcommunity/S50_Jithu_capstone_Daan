@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './login.css';
 import logo from "../assets/logo.png";
 import image1 from "../assets/image4.png";
-import axios from 'axios'; 
+import axios from 'axios';
 import google from "../assets/google.png";
 
 export default function Login() {
@@ -20,21 +20,24 @@ export default function Login() {
 
     const handleSubmit = async (event) => {
         event.preventDefault();
-        
+
         try {
             const response = await axios.post('http://localhost:4000/users/login', {
                 email: email,
                 password: password
             });
-            
-            // Check if login was successful
+
             console.log('Login response:', response.data);
-            setErrorMessage(''); // Clear any previous error messages
+            setErrorMessage('');
 
         } catch (error) {
             console.error('Error logging in:', error.response.data.error);
             setErrorMessage(error.response.data.error || 'Error logging in. Please try again later.');
         }
+    };
+
+    const handleGoogleClick = () => {
+        window.location.href = "http://localhost:4000/auth/google";
     };
 
     return (
@@ -52,14 +55,18 @@ export default function Login() {
                     <div className='llbox2'></div>
                     <div className='lformbox'>
                         <h1 className='createaccount'>Login</h1>
-                        <div className='googleflex'>
-  <div >
-    <img src={google} className='googlebtn' alt="Google Logo"/>
-    </div>
-    <div>
-    <h1 className="googletxt">Sign Up With Google</h1>
-    </div>
-    </div>
+                        <div className='lgooglecontainer'>
+                            <button className="lgoogle-signup-btn" onClick={handleGoogleClick}>
+                                <div className='lgoogleflex'>
+                                    <div >
+                                        <img src={google} className='googlebtn' alt="Google Logo" />
+                                    </div>
+                                    <div>
+                                        <h1 className="lgoogletxt">Sign Up With Google</h1>
+                                    </div>
+                                </div>
+                            </button>
+                        </div>
                         <form className="form1" onSubmit={handleSubmit}>
                             <div className='form-group'>
                                 <input
