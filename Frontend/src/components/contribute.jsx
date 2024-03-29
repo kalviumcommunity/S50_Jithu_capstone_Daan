@@ -7,8 +7,6 @@ import image1 from "../assets/conimage1.jpg"; // Import images for carousel
 import image2 from "../assets/conimage2.jpg";
 import image3 from "../assets/conimage3.jpeg";
 import image4 from "../assets/conimage4.jpg";
-// import leftArrow from "../assets/carousell.png"; // Import left arrow image
-// import rightArrow from "../assets/carouselr.png"; // Import right arrow image
 
 export default function Contribute() {
     const [curr, setCurr] = useState(0);
@@ -45,24 +43,24 @@ export default function Contribute() {
                 <div className='conflex'>
                     {/* Render the Carousel images with the provided slides */}
                     <div className='conimages'>
-                        {/* <img className="carousell" src={leftArrow} alt="Left Arrow" onClick={prev} /> */}
                         <img className='carouselimages' src={carouselSlides[curr]} alt="" />
-                        {/* <img className="carouselr" src={rightArrow} alt="Right Arrow" onClick={next} /> */}
                     </div>
-                    <div className='arrow-buttons'></div>
                     <div className='contribox1'>
                         <h1 className='conlcreateaccount'>Contribute What You Have</h1>
                         <form className="conform1">
                             <div className="contrflex">
                                 <div className='conform-group'>
-                                    <input className='input1'
-                                        type="text"
-                                        required
-                                    />
-                                    <label>Food Type</label>
+                                    <select className='input1 ml-3' required>
+                                        <option value="">Select Food Type</option>
+                                        <option value="1">Veg-Meals</option>
+                                        <option value="2">Non-Veg Meals</option>
+                                        <option value="3">Vegetables</option>
+                                        <option value="4">Fruits</option>
+                                        <option value="5">Others</option>
+                                    </select>
                                 </div>
                                 <div className='conform-group'>
-                                    <input className='input1 ml-3'
+                                    <input className='input1'
                                         type="text"
                                         required
                                     />
@@ -89,6 +87,14 @@ export default function Contribute() {
                                     required
                                 />
                                 <label>Address</label>
+                            </div>
+                            <div className='conform-group'>
+                                <input className='input2'
+                                    type="file"
+                                    accept="image/*"
+                                    required
+                                />
+                                <label>Upload Image</label>
                             </div>
                             <div className="conalign">
                                 <div className="checkbox-group">
