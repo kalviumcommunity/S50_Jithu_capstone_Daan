@@ -62,7 +62,7 @@ export default function Login() {
                                         <img src={google} className='googlebtn' alt="Google Logo" />
                                     </div>
                                     <div>
-                                        <h1 className="lgoogletxt">Sign Up With Google</h1>
+                                        <h1 className="lgoogletxt">Log In With Google</h1>
                                     </div>
                                 </div>
                             </button>

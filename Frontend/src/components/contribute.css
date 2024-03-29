@@ -27,7 +27,7 @@
 
 /* Apply animations to specific elements */
 .contribox {
-    height:650px;
+    height:750px;
     width: 900px;
     background: linear-gradient(45deg,#1f1343, #9c9acf);    
     border-radius: 50px;
@@ -39,7 +39,7 @@
 }
 
 .contribox1 {
-    height: 550px;
+    height: 650px;
     width: 400px;
     background-color: white;
     box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
@@ -71,8 +71,8 @@
 }
 
 .input1 {
-    width: 160px;
-   
+    width: 170px;
+   margin-left: 10px;
   /* Reduced width */
 }
 
@@ -107,7 +107,7 @@ input:focus + label, textarea:focus + label {
 
 .conlcreateaccount {
     margin-top: 20px;
-    margin-left: 40px;
+    margin-left: 20px;
     color: rgb(0, 0, 0);
     margin-right: 150px;
     font-family: "Outfit", sans-serif;
@@ -120,7 +120,8 @@ input:focus + label, textarea:focus + label {
 
 .contrflex {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
+    margin-left: -30px;
 }
 
 .conformbutton {
@@ -176,7 +177,7 @@ input:focus + label, textarea:focus + label {
 
 .carouselimages {
     max-width: 400px;
-    max-height: 400px;
+    max-height: 550px;
     min-width: 380px;
     min-height: 530px;
     border-radius: 50px;
@@ -185,7 +186,7 @@ input:focus + label, textarea:focus + label {
 }
 
 .conimages {
-    height: 550px;
+    height: 650px;
     width: 400px;
     box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
     padding-right: 10px;
@@ -194,3 +195,17 @@ input:focus + label, textarea:focus + label {
     display: flex;
     background-color: white;
 }
+
+
+.lbox1 {
+    height: 700px;
+    width: 700px;
+    background-color: #9c96cb;
+    border: 1px solid black;
+    margin-left: 300px;
+    margin-top: 195px;
+    border-radius: 49px;
+    display: flex;
+
+  }
+  

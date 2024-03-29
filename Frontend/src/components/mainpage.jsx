@@ -20,9 +20,9 @@ export default function Mainpage() {
             <div>
               <button className='hamburg' onClick={toggleMenu}>
                 <div className="grid justify-items-center gap-1.5">
-                  <span className={`h-1 w-8 rounded-full bg-white transition ${showMenu ? 'rotate-45 translate-y-2.5' : ''}`}></span>
+                  <span className={`h-1 w-8 rounded-full bg-white transition ${showMenu ? 'rotate-45 translate-y-2.0' : ''}`}></span>
                   <span className={`h-1 w-8 rounded-full bg-white transition ${showMenu ? 'scale-x-0' : ''}`}></span>
-                  <span className={`h-1 w-8 rounded-full bg-white transition ${showMenu ? '-rotate-45 translate-y-2.5' : ''}`}></span>
+                  <span className={`h-1 w-8 rounded-full bg-white transition ${showMenu ? '-rotate-45 translate-y-2.0' : ''}`}></span>
                 </div>
               </button>
             </div>

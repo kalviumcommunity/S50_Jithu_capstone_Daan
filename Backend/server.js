@@ -5,7 +5,8 @@ const connectDb = require('./config/database');
 const session = require('express-session');
 const passport = require('passport');
 const userRoute = require('./routes/usersRoute');
-const auth = require('./routes/auth') // Assuming your authentication strategies are configured here
+const contributepost =require('./routes/contributepost')
+const auth = require('./routes/auth')
 
 const app = express();
 connectDb();
@@ -18,6 +19,7 @@ app.use(passport.session());
 
 // Define your existing routes
 app.use('/users', userRoute);
+app.use("/contribute",contributepost)
 
 // Authentication routes and middleware
 function isLoggedIn(req, res, next) {
