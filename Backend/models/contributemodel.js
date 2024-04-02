@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 
 // Define schema for contribution item
 const contributionSchema = new mongoose.Schema({
-  foodType: {
+  foodType: {     
     type: String,
     required: true
   },

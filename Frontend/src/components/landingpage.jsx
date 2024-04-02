@@ -21,7 +21,7 @@ import "slick-carousel/slick/slick-theme.css";
 
 function LandingPage() {
   var settings = {
-    dots: true,
+   dots: true,
     infinite: true,
     slidesToShow: 3,
     slidesToScroll: 1,

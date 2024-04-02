@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import "./mainpage.css";
 import logo from "../assets/logo.png";
 import customercare from "../assets/customercare.png";
@@ -7,6 +7,28 @@ import { Link } from 'react-router-dom';
 
 export default function Mainpage() {
   const [showMenu, setShowMenu] = useState(false);
+  const [images, setImages] = useState([]);
+
+  useEffect(() => {
+    // Fetch the images from the URL
+    fetch('http://localhost:4000/contribute')
+      .then(response => {
+        // Check if response is successful
+        if (!response.ok) {
+          throw new Error('Failed to fetch images');
+        }
+        // Convert response to JSON
+        return response.json();
+      })
+      .then(data => {
+        // Set images state
+        console.log("DATA", data)
+        setImages(data);
+      })
+      .catch(error => {
+        console.error('Error fetching images:', error);
+      });
+  }, []); // Empty dependency array to run effect only once
 
   const toggleMenu = () => {
     setShowMenu(!showMenu);
@@ -53,61 +75,62 @@ export default function Mainpage() {
         <button>Donate</button>
       </div>
       <div className="menu-sections">
+        {/* Non-veg meals */}
+        {/* <h2 className='text-white text-3xl'>kbb</h2> */}
         <div className="menu-section">
-          <div className="menu-box">
-            <div className='menu-title'></div>
-          </div>
-          <div className="menu-box">
-          <div className='menu-title'></div>
-          </div>
-          <div className="menu-box">
-          <div className='menu-title'></div>
-          </div>
-          <div className="menu-box">
-          <div className='menu-title'></div>
-          </div>
+          {images && images.map((img, index) => (
+            img.foodType === "Non-Veg Meals" && (
+              <div className="menu-box" key={index}>
+                <img src={img.image} />
+                <div className='menu-title'>{img.dishName}</div>
+                <div className='menu-address'>{img.address}</div>
+                <div className='menu-location'>{img.location}</div>
+                <div className='menu-canDeliver'>{img.canDeliver}</div>
+              </div>
+            )
+          ))}
         </div>
+        {/* Veg meals */}
         <div className="menu-section">
-          <div className="menu-box">
-          <div className='menu-title'></div>
-          </div>
-          <div className="menu-box">
-          <div className='menu-title'></div>
-          </div>
-          <div className="menu-box">
-          <div className='menu-title'></div>
-          </div>
-          <div className="menu-box">
-          <div className='menu-title'></div>
-          </div>
+          {images
+            .filter(img => img.foodType === 'Veg-Meals')
+            .map((img, index) => (
+              <div className="menu-box" key={index}>
+                <img src={img.image} alt={img.name} />
+                <div className='menu-title'>{img.dishName}</div>
+                <div className='menu-address'>{img.address}</div>
+                <div className='menu-location'>{img.location}</div>
+                <div className='menu-canDeliver'>{img.canDeliver}</div>
+              </div>
+            ))}
         </div>
+        {/* Vegetable dishes */}
         <div className="menu-section">
-          <div className="menu-box">
-          <div className='menu-title'></div>
-          </div>
-          <div className="menu-box">
-          <div className='menu-title'></div>
-          </div>
-          <div className="menu-box">
-          <div className='menu-title'></div>
-          </div>
-          <div className="menu-box">
-          <div className='menu-title'></div>
-          </div>
+          {images
+            .filter(img => img.foodType === 'Vegetables')
+            .map((img, index) => (
+              <div className="menu-box" key={index}>
+                <img src={img.image} alt={img.name} />
+                <div className='menu-title'>{img.dishName}</div>
+                <div className='menu-address'>{img.address}</div>
+                <div className='menu-location'>{img.location}</div>
+                <div className='menu-canDeliver'>{img.canDeliver}</div>
+              </div>
+            ))}
         </div>
+        {/* Fruits */}
         <div className="menu-section">
-          <div className="menu-box">
-          <div className='menu-title'></div>
-          </div>
-          <div className="menu-box">
-          <div className='menu-title'></div>
-          </div>
-          <div className="menu-box">
-          <div className='menu-title'></div>
-          </div>
-          <div className="menu-box">
-          <div className='menu-title'></div>
-          </div>
+          {images
+            .filter(img => img.foodType === 'Fruits')
+            .map((img, index) => (
+              <div className="menu-box" key={index}>
+                <img src={img.image} alt={img.name} />
+                <div className='menu-title'>{img.dishName}</div>
+                <div className='menu-address'>{img.address}</div>
+                <div className='menu-location'>{img.location}</div>
+                <div className='menu-canDeliver'>{img.canDeliver}</div>
+              </div>
+            ))}
         </div>
       </div>
     </div>
