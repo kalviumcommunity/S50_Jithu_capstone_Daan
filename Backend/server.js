@@ -1,25 +1,25 @@
 require('dotenv').config();
 const express = require('express');
-const cors = require('cors');
+const cors = require('cors'); // Import cors
 const connectDb = require('./config/database');
 const session = require('express-session');
 const passport = require('passport');
 const userRoute = require('./routes/usersRoute');
-const contributepost =require('./routes/contributepost')
-const auth = require('./routes/auth')
+const contributepost = require('./routes/contributepost');
+const auth = require('./routes/auth');
 
 const app = express();
 connectDb();
 
 app.use(express.json());
-app.use(cors());
+app.use(cors()); // Use cors middleware
 app.use(session({ secret: 'cats', resave: false, saveUninitialized: true }));
 app.use(passport.initialize());
 app.use(passport.session());
 
 // Define your existing routes
 app.use('/users', userRoute);
-app.use("/contribute",contributepost)
+app.use('/contribute', contributepost);
 
 // Authentication routes and middleware
 function isLoggedIn(req, res, next) {

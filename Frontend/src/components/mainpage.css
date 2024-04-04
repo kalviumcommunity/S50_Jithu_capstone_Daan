@@ -181,28 +181,77 @@
 }
 
 .menu-section {
+  
+
+    
     padding-top: 80px;
     display: flex;
     justify-content: space-around; 
     margin-top: 80px;
     
 }
-
 .menu-box {
-    width: 255px;
-    height: 353px;
-    background-color: white;
-    margin-right: 20px;
+    width: 250px;
+    height: 380px;
     border-radius: 20px;
-}
-
-
-.menu-title{
-    background-color: black;
-    border-radius: 0px 0px 20px 20px;
-    width: 255px;
-    height: 213px;
-    margin-top: 140px;
-}
-
-
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    border: 2px solid red;
+    
+  }
+  
+  .menu-box:hover {
+    transform: translateY(-5px);
+  }
+  
+  .menu-box img {
+    width: 100%;
+    height: 70%;
+    object-fit: cover; /* Ensure the image covers the whole area */
+    border-radius:12px 12px 0 0;
+    transition: transform 0.3s ease; /* Add a transition effect */
+  }
+  
+  .menu-box:hover img {
+    transform: scale(1.1); /* Zoom in the image on hover */
+  }
+  
+  .menu-title {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 0 0 12px 12px;
+    transition: background-color 0.3s ease; /* Add transition effect */
+  }
+  
+  .menu-box:hover .menu-title {
+    background-color: rgba(0, 0, 0, 0.9); /* Darken the background color on hover */
+  }
+  
+  .menu-address,
+  .menu-location,
+  .menu-canDeliver {
+    /* Style these elements as needed */
+    color: white;
+    font-size: 14px;
+    margin-top: 5px;
+  }
+  
+  .menu-address,
+  .menu-location {
+    font-style: italic;
+  }
+  
+  .menu-canDeliver {
+    font-weight: bold;
+  }
+  
