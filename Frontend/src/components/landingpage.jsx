@@ -38,8 +38,8 @@ function LandingPage() {
         </div>
         <nav className="nav-links">
           <Link to="/about" className="login-btn"> About</Link>
-          <Link to="/about" className="login-btn"> About</Link>
-          <Link to="/about" className="login-btn"> About</Link>
+          <Link to="/about" className="login-btn"> Contact</Link>
+          <Link to="/about" className="login-btn">Donations</Link>
         </nav>
       </div>
       <div className='image1'>
@@ -59,7 +59,7 @@ function LandingPage() {
         <div className="box1">
           <div className="button-container2">
             <div><button className="button3"><Link to="/hiw">How It Work's</Link></button></div>
-            <div> <button className="button4">Community Events!!</button></div>
+            <div> <button className="button4"><Link to="/community">Community Events!!</Link></button></div>
           </div>
         </div>
         <div className="box2">

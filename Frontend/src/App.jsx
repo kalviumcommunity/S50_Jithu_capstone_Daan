@@ -7,6 +7,7 @@ import Aboutpage  from "./components/about"
 import Contribute from "./components/contribute"
 import Hiw from "./components/hiw"
 import Mainpage from './components/mainpage';
+import Community from './components/community';
 
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
         <Route path='/contribute' element={<Contribute/>} />
         <Route path='/hiw' element={<Hiw/>} />
         <Route path='/mainpage' element={<Mainpage/>} />
+        <Route path='/community' element={<Community/>} />
       </Routes>
     </div>
   );
