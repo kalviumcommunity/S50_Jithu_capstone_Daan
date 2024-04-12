@@ -1,0 +1,131 @@
+.community-body{
+    height: 2500px;
+    width:1350px;
+    background:black;
+    overflow-x: hidden;
+}
+
+
+.contribute-bg{
+    height:200px;
+    width:1200px;
+    margin-left: 70px;
+    margin-top: 40px;
+    position: relative;
+}
+.text-overlay {
+    position: absolute;
+    top: 5%;
+    left: 10%;
+    color: white;
+    font-weight: bold;
+    font-size:75px;
+    margin-top: 200px;
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: initial;
+    font-style: normal;
+
+}.small-text{
+    font-size:40px;
+    margin-top: 30px;   
+}
+.highlight {
+    color: #FFAB09; /* Change to whatever color you prefer */
+  }
+
+
+
+.community-carousel{
+    height: 480px;
+    margin-left: 50px;
+    margin-top: 35%;
+    width: 1300px;
+    background-color: rgb(0, 0, 0);
+    border-radius: 20px;
+ 
+   
+} 
+.slider-container {
+padding: 90px;
+padding-left: 50px;
+padding-right: 50px;}
+
+
+.com-images{
+height: 300px;
+    width:300px;
+    border-radius: 18px;
+}
+
+.slick-prev:before, .slick-next:before {
+    font-family: 'slick';
+    font-size: 20px;
+    line-height: 1;
+    opacity: .75;
+    color: black;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+
+.instanews{
+    background: #ffffff;
+    height:400px;
+    width: 100%;
+    font-family: "Outfit", sans-serif;
+  font-optical-sizing: initial;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 41px;
+  padding: 20px 0px 0px 20px;
+}
+.instagram-posts{
+    display: flex;
+    align-items: center;
+justify-content: space-around;
+padding-top: 5%;}
+
+.carouseltxt-h1{
+    font-family:oswald;
+    font-optical-sizing: initial;
+    font-weight: 900;
+    font-style: normal;
+    font-size: 41px;
+    color: #ffffff;  
+    width:600px;
+}
+
+.carouseltxt-p1{
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: initial;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 21px;
+    color: #ffffff; 
+    width:600px; 
+}
+.carousel-txt{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-bottom: 50px;
+    padding-left: 30px;
+}
+
+
+
+
+.cfooter {
+    background-color: #000000;
+    width: 100%; /* Changed width to 100% to make it responsive */
+    height: auto; /* Changed height to auto to adjust based on content */
+    padding: 30px; /* Added padding for better spacing */
+    color: white;
+    margin-top: 222px;
+    border:1px  solid rgb(255, 255, 255);
+}
+
+.cfoot{
+    background-color: #11053e;
+height: 20px;
+}
