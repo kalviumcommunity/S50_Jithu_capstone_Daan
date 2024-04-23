@@ -21,9 +21,13 @@ export default function Mainpage() {
         return response.json();
       })
       .then(data => {
+        // Convert images from buffer format to base64 string
+        const imagesWithBase64 = data.map(image => ({
+          ...image,
+          image: `data:image/png;base64,${image.image.toString('base64')}`
+        }));
         // Set images state
-        console.log("DATA", data)
-        setImages(data);
+        setImages(imagesWithBase64);
       })
       .catch(error => {
         console.error('Error fetching images:', error);
@@ -62,7 +66,7 @@ export default function Mainpage() {
         </div>
       </div>
       {showMenu && (
-        <div className="menu-page">
+        <div className="menu-page absolute">
           <nav className="mainnav-links">
             <Link to="/about" className="mainlogin-btn">Home</Link>
             <Link to="/account" className="mainlogin-btn"> Account</Link>
@@ -76,27 +80,28 @@ export default function Mainpage() {
       </div>
       <div className="menu-sections">
         {/* Non-veg meals */}
-        {/* <h2 className='text-white text-3xl'>kbb</h2> */}
         <div className="menu-section">
-          {images && images.map((img, index) => (
-            img.foodType === "Non-Veg Meals" && (
+          {images && images
+            .filter(img => img.foodType === "Non-Veg Meals")
+            .slice(0, 4) // Limit to 4 images
+            .map((img, index) => (
               <div className="menu-box" key={index}>
-                <img src={img.image} />
+                <img src={img.image} alt="Non-Veg Meal" />
                 <div className='menu-title'>{img.dishName}</div>
                 <div className='menu-address'>{img.address}</div>
                 <div className='menu-location'>{img.location}</div>
                 <div className='menu-canDeliver'>{img.canDeliver}</div>
               </div>
-            )
-          ))}
+            ))}
         </div>
         {/* Veg meals */}
         <div className="menu-section">
-          {images
-            .filter(img => img.foodType === 'Veg-Meals')
+          {images && images
+            .filter(img => img.foodType === "Veg-Meals")
+            .slice(0, 4) // Limit to 4 images
             .map((img, index) => (
               <div className="menu-box" key={index}>
-                <img src={img.image} alt={img.name} />
+                <img src={img.image} alt="Veg Meal" />
                 <div className='menu-title'>{img.dishName}</div>
                 <div className='menu-address'>{img.address}</div>
                 <div className='menu-location'>{img.location}</div>
@@ -106,11 +111,12 @@ export default function Mainpage() {
         </div>
         {/* Vegetable dishes */}
         <div className="menu-section">
-          {images
-            .filter(img => img.foodType === 'Vegetables')
+          {images && images
+            .filter(img => img.foodType === "Vegetables")
+            .slice(0, 4) // Limit to 4 images
             .map((img, index) => (
               <div className="menu-box" key={index}>
-                <img src={img.image} alt={img.name} />
+                <img src={img.image} alt="Vegetables" />
                 <div className='menu-title'>{img.dishName}</div>
                 <div className='menu-address'>{img.address}</div>
                 <div className='menu-location'>{img.location}</div>
@@ -120,18 +126,21 @@ export default function Mainpage() {
         </div>
         {/* Fruits */}
         <div className="menu-section">
-          {images
-            .filter(img => img.foodType === 'Fruits')
+          {images && images
+            .filter(img => img.foodType === "Fruits")
+            .slice(0, 4) // Limit to 4 images
             .map((img, index) => (
               <div className="menu-box" key={index}>
-                <img src={img.image} alt={img.name} />
+                <img src={img.image} alt="Fruits" />
                 <div className='menu-title'>{img.dishName}</div>
                 <div className='menu-address'>{img.address}</div>
                 <div className='menu-location'>{img.location}</div>
                 <div className='menu-canDeliver'>{img.canDeliver}</div>
               </div>
             ))}
-        </div>
+        </div>   
+        {/* Others */}
+        {/* Add additional sections for other categories as needed */}
       </div>
     </div>
   );

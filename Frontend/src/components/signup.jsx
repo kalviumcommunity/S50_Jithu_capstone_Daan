@@ -6,6 +6,7 @@ import image2 from "../assets/image2.png";
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 import google from "../assets/google.png";
+import Particles from '../assets/particles';
 
 
 export default function Signup() {
@@ -69,6 +70,7 @@ export default function Signup() {
 
     return (
         <div>
+            
             <div className='lbody'>
                 <div className='lheader'>
                     <div className='llogo'><img src={logo} alt="Logo" /></div>

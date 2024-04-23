@@ -35,10 +35,8 @@ router.post('/', upload.single('image'), async (req, res) => {
 
     const newContribution = new Contribution(value);
 
-    // Check if image file exists in request
     if (req.file) {
-      // If image file exists, append it to the Contribution object
-      newContribution.image = req.file.buffer; // Assuming the image is stored as a buffer
+      newContribution.image = req.file.buffer;
     }
 
     const savedContribution = await newContribution.save();
@@ -50,13 +48,21 @@ router.post('/', upload.single('image'), async (req, res) => {
   }
 });
 
-router.get('/', async (req, res) => {
+router.get("/", async (req, res) => {
   try {
     const contributions = await Contribution.find();
-    res.status(200).json(contributions);
+    const contributionsWithBase64Images = contributions.map(contribution => {
+      const base64Image = contribution.image.toString('base64');
+      return {
+        ...contribution._doc,
+        image: base64Image
+      };
+    });
+
+    res.status(200).json(contributionsWithBase64Images);
   } catch (error) {
-    console.error('Error in GET /contribute:', error);
-    res.status(500).json({ error: 'Internal Server Error' });
+    console.error(error);
+    res.status(500).json({ message: "Internal server error" });
   }
 });
 

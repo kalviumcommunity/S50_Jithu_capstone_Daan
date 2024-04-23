@@ -8,6 +8,7 @@ import Contribute from "./components/contribute"
 import Hiw from "./components/hiw"
 import Mainpage from './components/mainpage';
 import Community from './components/community';
+import Account from './components/account';
 
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
         <Route path='/hiw' element={<Hiw/>} />
         <Route path='/mainpage' element={<Mainpage/>} />
         <Route path='/community' element={<Community/>} />
+        <Route path='/account' element={<Account/>} />
       </Routes>
     </div>
   );

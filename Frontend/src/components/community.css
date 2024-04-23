@@ -70,7 +70,7 @@ height: 300px;
 
 .instanews{
     background: #ffffff;
-    height:400px;
+    height:600px;
     width: 100%;
     font-family: "Outfit", sans-serif;
   font-optical-sizing: initial;
@@ -83,7 +83,7 @@ height: 300px;
     display: flex;
     align-items: center;
 justify-content: space-around;
-padding-top: 5%;}
+padding-top: 2%;}
 
 .carouseltxt-h1{
     font-family:oswald;

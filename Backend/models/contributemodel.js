@@ -1,6 +1,5 @@
 const mongoose = require('mongoose');
 
-// Define schema for contribution item
 const contributionSchema = new mongoose.Schema({
   foodType: {
     type: String,
@@ -23,7 +22,7 @@ const contributionSchema = new mongoose.Schema({
     required: true
   },
   image: {
-    type: Buffer, // Store image as buffer
+    type: Buffer,
     required: true
   },
   canDeliver: {
@@ -32,7 +31,6 @@ const contributionSchema = new mongoose.Schema({
   }
 });
 
-// Create a Mongoose model based on the schema
 const Contribution = mongoose.model('Contribution', contributionSchema);
 
 module.exports = Contribution;
