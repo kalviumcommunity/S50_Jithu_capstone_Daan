@@ -6,6 +6,11 @@ const userSchema = new mongoose.Schema({
     required: true,
     unique: true
   },
+  about: {
+    type: String,
+    required: true,
+    unique: true
+  },
   email: {
     type: String,
     required: true,
@@ -15,8 +20,12 @@ const userSchema = new mongoose.Schema({
     type: String,
     required: true
   },
+  posts : {
+    type : []
+  }
+
 });
 
 const User = mongoose.model('User', userSchema);
 
-module.exports = { User };
+module.exports =  User ;

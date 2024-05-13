@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>vffdf</title>
+    <link rel="stylesheet" href="mainpage.css" />
+</head>
+
+<body>
+    <div class="topheader"></div>
+    <div class="allnav">
+        <a href="index.html">  <button class="navbar">Home</button></a>
+        <a href="inspiration.html">  <button class="navbar1">Inspiration</button>
+            <a href="chef.html"><button class="navbar2">Chef</button>
+                <a href="about us.html"><button class="navbar3">About Us</button>
+                    <a href="contact us .html"> <button class="navbar4">Contact Us</button></a>
+    </div>
+    <div class="firstimage">
+        <div class="main">
+
+            <h1 class="head-text">
+                Welcome To Mazi
+            </h1>
+            <h3 class="slogn">
+                where we are trying to change your foodstyle for better.
+            </h3>
+        </div>
+        <div class="input">
+            <div class="inputbox">
+                <input type="text" placeholder="Search by name ....." />
+                <div class="button">
+                    <img src="search_icon-removebg-preview.png" alt="" class="search-img" />
+                </div>
+            </div>
+        </div>
+    </div>
+    <h4 class="liked">Mostly Liked</h4>
+
+    <div class="liked-meal">
+        <div class="liked-img"></div>
+
+        <h1 id="meal-title" class="like-title"></h1>
+
+        <h3 class= "recommended-meal-ingredients" onclick="openModal()">View ingredients</h3>
+    </div>
+
+
+
+
+
+    <h4 class="recommended search-result">Search results:</h4>
+
+    <div class="results "  >
+        <div class="box">
+            <div class=" resultimg"></div>
+
+            <h1 class=" result-title"></h1>
+
+            <h3 class="recommended-meal-ingredients"  onclick="openModal1()">View ingredients</h3>
+        </div>
+
+        <div class="box">
+            <div class=" resultimg"></div>
+
+            <h1 class=" result-title"></h1>
+
+            <h3 class="recommended-meal-ingredients"  onclick="openModal1()">View ingredients</h3>
+        </div>
+
+        <div class="box">
+            <div class=" resultimg"></div>
+
+            <h1 class="result-title"></h1>
+
+            <h3 class="recommended-meal-ingredients"  onclick="openModal1()">View ingredients</h3>
+        </div>
+
+        <div class="box">
+            <div class=" resultimg"></div>
+
+            <h1 class=" result-title"></h1>
+
+            <h3 class="recommended-meal-ingredients"  onclick="openModal1()">View ingredients</h3>
+        </div>
+
+        <div class="box">
+            <div class=" resultimg"></div>
+
+            <h1 class=" result-title"></h1>
+
+            <h3 class="recommended-meal-ingredients"  onclick="openModal1()">View ingredients</h3>
+        </div>
+
+        <div class="box">
+            <div class=" resultimg">
+            </div>
+
+            <h1 class="result-title"></h1>
+
+            <h3 class="recommended-meal-ingredients"  onclick="openModal1()">View ingredients</h3>
+
+        </div>
+    </div>
+
+
+    <div class="modal" id="myModal">
+        <div class="modal-content">
+          <span onclick="closeModal()" style="cursor: pointer;">&times;</span>
+        <div>  <h1 class="modal-page"> Recipie :</h1></div>
+          
+   <div> <h2 class="ingredient-head-list"></h2> </div>
+   <!-- <div> <h2 class="ingredient-head1-list">Ingredients</h2> </div> -->
+        </div>
+      </div>
+
+    
+      <div> <h2 class="ingredient-head-list1"></h2> </div>
+      <!-- <div> <h2 class="ingredient-head1-list">Ingredients</h2> </div> -->
+           </div>
+         </div>
+
+      <div class="modal1" id="myModal1">
+        <div class="modal-content1">
+          <span onclick="closeModal1()" style="cursor: pointer;">&times;</span>
+        <div>  <h1 class="modal-page1"> Recipie :</h1></div>
+          
+        </div>
+
+</div>
+
+
+
+
+
+
+      
+
+
+    <footer>
+        <h3 class="kalvian">Proudly By Kalvian</h3>
+    </footer>
+
+
+    <script src="mainpage.js"></script>
+</body>
+
+</html>

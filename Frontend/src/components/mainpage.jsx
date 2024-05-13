@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import axios from 'axios'; 
 import "./mainpage.css";
 import logo from "../assets/logo.png";
 import customercare from "../assets/customercare.png";
@@ -10,28 +11,21 @@ export default function Mainpage() {
   const [images, setImages] = useState([]);
 
   useEffect(() => {
-    // Fetch the images from the URL
-    fetch('http://localhost:4000/contribute')
-      .then(response => {
-        // Check if response is successful
-        if (!response.ok) {
-          throw new Error('Failed to fetch images');
-        }
-        // Convert response to JSON
-        return response.json();
-      })
-      .then(data => {
-        // Convert images from buffer format to base64 string
-        const imagesWithBase64 = data.map(image => ({
+    const fetchImages = async () => {
+      try {
+        // Fetch the images using Axios with an id parameter
+        const response = await axios.get('http://localhost:4000/contribute'); // Replace 'yourUserId' with the actual id
+        const imagesWithBase64 = response.data.map(image => ({
           ...image,
           image: `data:image/png;base64,${image.image.toString('base64')}`
         }));
-        // Set images state
         setImages(imagesWithBase64);
-      })
-      .catch(error => {
+      } catch (error) {
         console.error('Error fetching images:', error);
-      });
+      }
+    };
+
+    fetchImages();
   }, []); // Empty dependency array to run effect only once
 
   const toggleMenu = () => {

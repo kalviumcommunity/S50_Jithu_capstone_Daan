@@ -1,0 +1,160 @@
+body{
+    overflow: hidden;
+}
+
+.accbody {
+    overflow-y: hidden;
+    background-color: black;
+}
+
+.account-bg {
+    overflow: hidden;
+    background-image: url("../assets/account7.png");
+    height: 700px;
+    width: 1360px;
+    justify-content: space-around;
+}
+
+.account-logo {
+    margin-top: 10px;
+    margin-left: -100px;
+    filter: drop-shadow(10px 10px 10px rgb(24, 23, 26));
+}
+
+.profileheading {
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: initial;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 24px;
+    margin-top: 15px;
+    margin-left: -150px;
+}
+
+.profilewel {
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: initial;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+    margin-left: -150px;
+}
+
+.profile-smallpic {
+    margin-top: 25px;
+    height: 50px;
+    width: 50px;
+    padding: 10px;
+    border-radius: 50px;
+    background-color: black;
+}
+
+.profile-smallpich {
+    margin-left: 20px;
+    margin-top: 40px;
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: initial;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+    overflow-x: hidden;
+}
+
+.side-window {
+    height: 100vh;
+    width: 130px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 2px 2px 2px rgb(155, 154, 154);
+    align-items: center;
+}
+
+
+.dashboard {
+    color: black;
+    margin-top: 7px;
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: initial;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 19px;
+    margin-left: 20px;
+
+}
+
+.dashboard-image {
+    height: 40px;
+    width: 40px;
+}
+
+
+
+.dashboard-flex {
+    margin-left: -100px;
+    margin-top: 50px;
+}
+
+.accountnav-links {
+    margin-top: 20px;
+    margin-left: -100px;
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: initial;
+    font-weight: 500;
+    color: darkgrey;
+    font-style: normal;
+    font-size: 19px;
+    display: flex;
+    flex-direction: column;
+}
+
+.accountlogin-btn {
+    padding-top: 20px;
+}
+
+.smallpicflex {
+    display: flex;
+}
+
+/* .profile-box {
+    height: 490px;
+    border-radius: 20px;
+    width: 900px;
+    background-color: black;
+    opacity: 0.2;
+    position: absolute;
+    margin-top: -500px;
+    margin-left: 400px;
+} */
+
+.profile-data {
+    height: 440px;
+    width: 350px;
+    background-color: white;
+    position: relative;
+    /* margin-top: 20px; */
+    /* margin-left: 40px; */
+    border-radius: 15px;
+}
+
+.nav-icon {
+    height: 35px;
+    padding-right: 20px;
+}
+
+.dashboard-name {
+    margin-top: 5px;
+}
+
+
+.nav-item {
+    display: flex;
+
+}
+
+
+
+
+
+
+
+
+

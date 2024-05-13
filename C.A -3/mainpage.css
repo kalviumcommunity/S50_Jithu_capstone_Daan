@@ -1,0 +1,466 @@
+
+
+body {
+    /* background-image: url(eugene-golovesov-4ReE1Os3l5E-unsplash.jpg); */
+    background-size:cover;
+    padding: 0;
+    margin: 0;
+    background-color: white;
+    overflow-y: scroll;
+    overflow-x: hidden;
+ 
+}
+/* .topheader{
+  height: 10px;
+  width: 100vw;
+  background-color: #000000;
+} */
+.allnav{
+  background-color: rgb(4, 94, 13);
+  border: 2px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.firstimage{
+  background-image: url(Frame\ 1.png);
+  background-size: cover;
+  background-position: center;
+height: 500px;
+  margin: 0px;
+  border: 0px;
+  margin-top:-35px;
+
+}
+
+.navbar{
+  margin-left: 0px;
+
+  
+
+}
+.navbar1{
+  margin-left:100px;
+}
+.navbar2{
+  margin-left: 80px;
+}
+.navbar3{
+  margin-left: 80px;
+}
+.navbar4{
+  margin-left: 100px;}
+  button{
+    padding: 8px 16px;
+      color: white;
+      background-color: #0f791a;
+      border:1px solid black;
+      border-radius: 5px;
+      cursor: pointer;
+      align-items: center;
+     
+      padding: 10px 10px 10px 10px;
+  }
+
+.head-text {
+
+    font-size: 52px;
+    font-family: 'Inika', sans-serif;
+ margin-left: 450px;
+
+    color: #ffffff;
+}
+
+span {
+    color: #EA492E;
+}
+
+.slogn {
+    font-weight: lighter;
+    font-size: 20px;
+    font-family: 'Poppins', sans-serif;
+    margin-left: 420px;
+    color: #ffffff;
+    margin-top: 100px;
+}
+
+
+.input {
+    margin-top:100px;
+    display: flex;
+    justify-content: center;
+    margin-left: 70px;
+}
+
+.inputbox {
+    height: 52px;
+    display: flex;
+    text-align: center;
+}
+
+input {
+    border: 2px solid #0c1d28; 
+    box-shadow: 0px 0px 20px rgb(11, 10, 10);
+    border-radius: 25px 0px 0px 25px;
+    padding: 10px;
+    width: 250px;
+}
+
+input::placeholder {
+    padding-left: 10px;
+    font-family: 'Poppins', sans-serif;
+    color: #BDC3C7;
+}
+
+input::-webkit-search-decoration {
+    padding-left: 10px;
+    font-family: 'Poppins', sans-serif;
+    color: #e21818;
+}
+
+.button {
+    position: relative;
+    right: 1px;
+    background-color: #0f6c06;
+    border-radius: 0px 11px 11px 0px;
+    height: 52px;
+    width: 100px;
+}
+.recommended-meal-ingredients{
+  color: #BDC3C7;
+  
+}
+.search-img {
+    margin-top: 10px;
+    margin-right: 5px;
+    height: 34px;
+}
+
+.liked {
+  margin-left: -80px;
+    margin-bottom: 10px;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bolder;
+    margin-top: 50px;
+    font-size: 40px;
+    color: rgb(181, 67, 164);
+}
+
+.liked-meal {
+    box-shadow: 0px 0px 20px rgb(238, 238, 238);
+    border: 1px solid rgb(216, 216, 216);
+    border-radius: 13px;
+    height: 350px;
+    width: 300px;
+    margin-left: 36%;
+    background-color: #ECF0F1; 
+}
+
+.liked-img{
+    height: 270px;
+    width: 300px;
+    border-radius: 12px 12px 0px 0px;
+    background-image: url(); 
+    background-size: cover;
+    box-shadow: #000000;
+}
+
+#meal-title {
+    margin-left: 20px;
+    margin-top: -20px;
+    font-family:'Poppins', sans-serif;
+    font-size: 25px;
+    font-weight: bold;
+    border: #3498DB;
+    color: #ffffff;
+    box-shadow: #000000;
+}
+
+.meal-ingredients{
+    line-height: 0px;
+    margin-left: 20px;
+    font-family:'Poppins', sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    color: #5e5e5e;
+}
+.result-title{
+  font-family:'Poppins', sans-serif; 
+}
+.recommended-meal-ingredients{
+  font-family:'Poppins', sans-serif; 
+}
+.recommended-meal-ingredients:hover {
+    color: #000a0b; 
+    cursor: pointer;
+}
+
+/* Search Result Styles */
+.search-result {
+    display: none;
+    margin-top: 50px;
+    margin-left: 100px;
+    margin-bottom: 40px;
+    font-family:'Poppins', sans-serif ;
+    font-size: 25px;
+    color: #3498DB; /* Blue */
+}
+
+/* Results Styles */
+.results {
+    margin-left: 6%;
+    display: grid;
+    grid-template-columns: repeat(3, 400px);
+    grid-template-rows: repeat(4, 370px);
+    row-gap: 30px;
+    column-gap: 30px;
+    width: fit-content;
+    height: fit-content;
+    display: none;
+    
+}
+
+.box {
+    background-color: #ECF0F1; /* Light Gray */
+    box-shadow: 0px 0px 20px rgb(44, 36, 69);
+    border: 1px solid rgb(216, 216, 216);
+    border-radius: 10px;
+    height: 200px;
+    width: 300px;
+}
+
+/* Footer Styles */
+footer {
+    margin-top: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #000000; /* Black */
+    width: 100%;
+    height: 90px;
+}
+
+
+
+.resultimg {
+    background-image: url(); /* Add your image URL here */
+    background-size: cover;
+    height: 200px;
+    width: 300px;
+    border-radius: 10px;
+}
+
+/* Modal Container (Ingredients) Styles */
+.modal-container {
+    opacity: 0;
+    pointer-events: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.modal-container.show {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.ingredients-modal {
+    max-width: 100%;
+    padding: 15px 10px;
+    width: 1200px;
+    background-color: white;
+    box-shadow: 0px 0px 10px rgb(211, 211, 211);
+    border: 1px solid rgb(216, 216, 216);
+    border-radius: 13px;
+}
+
+.ingredients {
+    font-family: 'Poppins', sans-serif;
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: #4B4B4B;
+    text-decoration: underline;
+    margin-left: 40px;
+}
+
+.modal-title {
+    font-size: 27px;
+    margin-left: 43px;
+    color: #E74C3C; /* Red */
+}
+
+.modal-img {
+    height: 350px;
+    width: 400px;
+    margin-left: 40px;
+    margin-bottom: 30px;
+    border-radius: 12px;
+    background-image: url(./assets/image1.png); /* Add your image URL here */
+    background-size: cover;
+}
+
+.modal-content {
+    display: flex;
+}
+
+.modal-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: fit-content;
+}
+
+.close {
+    margin-right: 40px;
+    height: 16px;
+    color: #3498DB; /* Blue */
+}
+
+.close:hover {
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+.ingredient-list {
+    margin-left: 15px;
+    font-family: 'Poppins', sans-serif;
+    color: #4B4B4B;
+    font-size: 20px;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  align-items: center;
+  justify-content: center;
+  overflow: scroll;
+}
+
+.modal-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.ingredient-head-list{
+  color: #000000;
+  font-size: 20px;
+}
+.modal-page{
+  color: #000000;
+  font-size: 20px;
+}
+.ingredient-head1-list{
+  color: #000000;
+  font-size: 20px;
+}
+.modal1{
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  align-items: center;
+  justify-content: center;
+  overflow: scroll;
+}
+
+.modal-content1 {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.ingredient-head-list1{
+  color: #000000;
+  font-size: 20px;
+}
+.modal-page1{
+  color: #000000;
+  font-size: 20px;
+}
+.ingredient-head1-list1{
+  color: #000000;
+  font-size: 20px;
+}
+.kalvian{
+color: white;
+align-items: center;
+}
+
+
+
+
+
+@media only screen and (max-width: 768px) {
+  .allnav {
+      flex-direction: column;
+      align-items: center;
+      padding: 10px;
+  }
+
+  .navbar1, .navbar2, .navbar3, .navbar4 {
+      margin-left: 0;
+      margin-top: 10px;
+  }
+
+  .firstimage {
+      height: auto;
+      margin-top: 0;
+      text-align: center;
+  }
+
+  .head-text, .slogn {
+      margin-left: 0;
+  }
+
+  .liked-meal {
+      margin-left: 5%;
+  }
+
+  .results {
+    margin-left: 6%;
+    display: grid;
+    grid-template-columns: repeat(1, 20%);
+    grid-template-rows: repeat(6, 15%);
+    row-gap: 10px;
+    column-gap: 0px;
+    /* border: 1px solid red; */
+    width: fit-content;
+    height: 160em;
+    display: none;
+    
+  }
+
+  .box {
+    text-align: center
+    ;
+      width: 100%;
+  }
+
+  .result-title{
+    font-size: 25px;
+    width: 10em;
+    font-family:'Poppins', sans-serif; 
+  }
+  .recommended-meal-ingredients{
+    width: 10em;
+    font-family:'Poppins', sans-serif; 
+}
+}

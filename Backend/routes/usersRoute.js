@@ -2,13 +2,14 @@ const express = require('express');
 const router = express.Router();
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
-const { User } = require('../models/userModel');
+const  User  = require('../models/userModel');
 const Joi = require('joi');
 require('dotenv').config();
 
 // Joi schema for user validation
 const userSchema = Joi.object({
   username: Joi.string().required(),
+  about: Joi.string().required(),
   email: Joi.string().email().required(),
   password: Joi.string().min(6).required(),
 });
@@ -40,10 +41,8 @@ router.post('/login', async (req, res) => {
     // Generate JWT token
     const token = generateToken(user);
 
-    // Set JWT token as a cookie or in response header
-    res.cookie('token', token, { httpOnly: true });
-  
-    res.status(200).json({ message: 'Login successful', token });
+    // Set JWT token as a cookie or in response header  
+    res.status(200).json({ message: 'Login successful', token : token , user : user });
   } catch (error) {
     res.status(500).json({ error: error.message });
   }
@@ -78,6 +77,7 @@ router.post('/', async (req, res) => {
   try {
     // Validate the request body
     const { error, value } = userSchema.validate(req.body);
+    console.log(value)
     if (error) {
       return res.status(400).json({ error: error.details[0].message });
     }
@@ -85,18 +85,20 @@ router.post('/', async (req, res) => {
     // Hash the password
     const hashedPassword = await bcrypt.hash(value.password, 10);
 
-    const newUser = new User({
+    const newUser = {
       username: value.username,
+      about: value.about,
       email: value.email,
       password: hashedPassword,
-    });
+      posts : []
+    };
 
-    const savedUser = await newUser.save();
+    const user = await User.create(newUser)
+    console.log(user)
 
-    // Generate JWT token
-    const token = generateToken(savedUser);
+    const token = generateToken(user);
 
-    res.status(201).json({ user: savedUser, token });
+    res.status(201).json({ user: user, token });
   } catch (error) {
     res.status(500).json({ error: error.message });
   }
@@ -111,6 +113,7 @@ router.put('/:id', async (req, res) => {
       return res.status(404).json({ error: "User not found" });
     }
     res.status(200).json(updatedData);
+ 
   } catch (error) {
     res.status(500).json({ error: error.message });
   }

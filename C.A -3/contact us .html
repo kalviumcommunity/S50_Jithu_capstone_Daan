@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - Your Website</title>
+  <style>
+    p{
+        color: black;
+    }
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Arial', sans-serif;
+      background: url('eugene-golovesov-4ReE1Os3l5E-unsplash.jpg') ;
+      background-size: cover;
+      color: #fff;
+    }
+
+    header {
+      background-color: rgba(0, 0, 0, 0.5);
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    section {
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: rgba(98, 98, 98, 0.8);
+      border-radius: 10px;
+    }
+    label{
+        color:black;
+    }
+    .button{
+            color: rgb(134, 5, 5);
+            background-color: rgb(151, 177, 8);
+            border-radius: 10px;
+            height: 40px;
+            width :200px;
+            margin-bottom: -20px;
+            margin-left:600px ;
+        }
+        button{
+          color: rgb(134, 5, 5);
+            background-color: rgb(237, 242, 204);
+            border-radius: 20px;
+            height: 30px;
+            width :100px;
+            margin-left:700px ;
+        }
+        input{
+          border-radius: 15px;
+          height: 40px;
+          width:200px
+        }
+        textarea{
+          border-radius: 15px;
+          height: px;
+          width:150px
+        }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Contact Us</h1>
+  </header>
+
+  <section>
+    <p>Have questions or feedback? We'd love to hear from you! Fill out the form below, and we'll get back to you as soon as possible.</p>
+
+    <form>
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" rows="4" required></textarea>
+
+      <button type="submit">Submit</button>
+    </form>
+  </section>
+  <a href="index.html"> <button  class="button">home</button></a>
+</body>
+</html>

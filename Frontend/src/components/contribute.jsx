@@ -8,21 +8,24 @@ import image1 from "../assets/conimage1.jpg"; // Import images for carousel
 import image2 from "../assets/conimage2.jpg";
 import image3 from "../assets/conimage3.jpeg";
 import image4 from "../assets/conimage4.jpg";
+import Cookies from 'js-cookie';
 
 export default function Contribute() {
+    const userId = Cookies.get('userid');
+
     const [formData, setFormData] = useState({
         foodType: "",
         location: "",
         dishName: "",
         dishDescription: "",
         address: "",
-        image: null, // Store the image file
-        canDeliver: false
+        image: null, 
+        canDeliver: false,
+        creatorId: userId || '',
     });
 
     const [curr, setCurr] = useState(0);
 
-    // Define an array of slides for the carousel
     const carouselSlides = [image1, image2, image3, image4];
 
     useEffect(() => {
@@ -36,13 +39,21 @@ export default function Contribute() {
         event.preventDefault();
 
         try {
-            const response = await axios.post('http://localhost:4000/contribute', formData, {
-                headers: {
-                    'Content-Type': 'multipart/form-data'
-                }
-            });
-            
-            console.log(response.data);
+            const formDataToSend = new FormData();
+            const creatorId = Cookies.get('userid');
+
+            formDataToSend.append('foodType', formData.foodType);
+            formDataToSend.append('location', formData.location);
+            formDataToSend.append('dishName', formData.dishName);
+            formDataToSend.append('dishDescription', formData.dishDescription);
+            formDataToSend.append('address', formData.address);
+            formDataToSend.append('image', formData.image);
+            formDataToSend.append('canDeliver', formData.canDeliver);
+            formDataToSend.append('creatorId', creatorId);
+
+            const response = await axios.post('http://localhost:4000/contribute', formDataToSend);
+
+            console.log('Response:', response.data);
 
             // Clear form after successful submission
             setFormData({
@@ -52,10 +63,12 @@ export default function Contribute() {
                 dishDescription: "",
                 address: "",
                 image: null,
-                canDeliver: false
+                canDeliver: false,
+                creatorId: '',
             });
         } catch (error) {
             console.error('Error submitting form:', error);
+            console.log('Error response:', error.response ? error.response.data : 'No response data available');
         }
     };
 
@@ -86,7 +99,6 @@ export default function Contribute() {
             </div>
             <div className='contribox'>
                 <div className='conflex'>
-                    {/* Render the Carousel images with the provided slides */}
                     <div className='conimages'>
                         <img className='carouselimages' src={carouselSlides[curr]} alt="" />
                     </div>
@@ -164,7 +176,7 @@ export default function Contribute() {
                                         onChange={(e) => setFormData({ ...formData, canDeliver: e.target.checked })}
                                     />
                                 </div>
-                                <div><h1 className='agree'> can you <img src={deliver} />in your locality </h1></div>
+                                <div><h1 className='agree'>Can you <img src={deliver} alt="deliver" /> in your locality?</h1></div>
                             </div>
                             <button className="conformbutton bg-black" type="submit">Submit</button>
                         </form>
