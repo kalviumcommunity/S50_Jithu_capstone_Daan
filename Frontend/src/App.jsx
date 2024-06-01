@@ -9,6 +9,7 @@ import Hiw from "./components/hiw"
 import Mainpage from './components/mainpage';
 import Community from './components/community';
 import Account from './components/account';
+import Editpost from './components/editpost';
 
 
 function App() {
@@ -24,6 +25,8 @@ function App() {
         <Route path='/mainpage' element={<Mainpage/>} />
         <Route path='/community' element={<Community/>} />
         <Route path='/account' element={<Account/>} />
+        <Route path='/postedit/:id' element={<Editpost/>} />
+
       </Routes>
     </div>
   );

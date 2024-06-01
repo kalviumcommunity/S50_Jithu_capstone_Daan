@@ -5,7 +5,7 @@
 .sidewindow {
     background-color: blueviolet;
     width: 20%;
-    height: 50vw;
+    height: 48vw;
     position: fixed;
 }
 
@@ -42,14 +42,27 @@
 }
 
 .small-profile {
-    height: 90px;
-    width: 90px;
-    background-color: blueviolet;
+    height: 100px;
+    width: 100px;
+    background-color: rgb(102, 255, 0);
     border-radius: 50px;
-    margin-top: 50%;
-    margin-left: 60%;
-    padding: 20px;
+     padding: 2px;
+     position: relative;
+
 }
+
+
+
+
+/* .addpic{
+    height: 30px;
+    width:30px;
+    background-color: #17086e;
+    margin-top: -20%;
+    margin-left: 100%;
+    border-radius: 50px;
+    position: absolute;
+} */
 
 .profile-name {
     font-weight: 500;
@@ -72,7 +85,7 @@
 .profile-bottonss {
     align-items: center;
     background-color: blueviolet;
-    margin-left: 30px;
+    margin-left: 20px;
     color: white;
     padding: 6px 20px 6px 20px;
     border-radius: 10px;
@@ -87,6 +100,9 @@
     align-items: center;
     justify-content: space-between;
 }
+
+
+
 
 .myposts {
     display: grid;
@@ -230,4 +246,83 @@
     font-size: 20px;
     color: white;
 
+}
+
+
+/* Overlay for making the background non-clickable and darkened */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+}
+
+/* Popup styling for a clean and centered look */
+.edit-popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    z-index: 1010;
+    width: 600px;
+    height: 400px;
+    max-width: 400px;
+    text-align: center;
+}
+
+/* Labels for the form fields */
+/* .edit-popup label {
+    display: block;
+    margin-bottom: 30px;
+    font-weight: bold;
+    color: #333;
+    text-align: left;
+} */
+
+/* Inputs and textareas for the form fields */
+/* .edit-popup input,
+.edit-popup textarea {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 10px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-size: 16px;
+} */
+
+/* Buttons styling for save and cancel */
+.savebtn,
+.cancelbtn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    width: 45%;
+    margin-top: 20px;
+}
+
+/* Save button styling */
+.savebtn {
+    background-color: #4CAF50;
+    color: white;
+    margin-right: 10%;
+}
+
+/* Cancel button styling */
+.cancelbtn {
+    background-color: #f44336;
+    color: white;
 }

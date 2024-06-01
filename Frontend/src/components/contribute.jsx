@@ -1,17 +1,17 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
+import Cookies from 'js-cookie'; // Import js-cookie
 import "./contribute.css";
 import logo from "../assets/logo.png";
 import deliver from "../assets/deliver.png";
-import image1 from "../assets/conimage1.jpg"; // Import images for carousel
+import image1 from "../assets/conimage1.jpg";
 import image2 from "../assets/conimage2.jpg";
 import image3 from "../assets/conimage3.jpeg";
 import image4 from "../assets/conimage4.jpg";
-import Cookies from 'js-cookie';
 
 export default function Contribute() {
-    const userId = Cookies.get('userid');
+    const userId = Cookies.get('userid'); // Use Cookies to get the user ID
 
     const [formData, setFormData] = useState({
         foodType: "",
@@ -19,7 +19,7 @@ export default function Contribute() {
         dishName: "",
         dishDescription: "",
         address: "",
-        image: null, 
+        image: null,
         canDeliver: false,
         creatorId: userId || '',
     });
@@ -40,7 +40,7 @@ export default function Contribute() {
 
         try {
             const formDataToSend = new FormData();
-            const creatorId = Cookies.get('userid');
+            const creatorId = Cookies.get('userid'); // Get user ID again just before submission
 
             formDataToSend.append('foodType', formData.foodType);
             formDataToSend.append('location', formData.location);
