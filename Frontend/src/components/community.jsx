@@ -23,9 +23,9 @@ export default function Community() {
         pauseOnHover: true
     };
 
-
     return (
         <div className='community-body'>
+            {/* Header */}
             <div className='lheader'>
                 <div className='llogo'><img src={logo} alt="Logo" /></div>
                 <nav className="nav-links">
@@ -34,6 +34,8 @@ export default function Community() {
                     <Link to="/about" className="login-btn"> Join Us</Link>
                 </nav>
             </div>
+            
+            {/* Contribute Background */}
             <div className="contribute-bg">
                 <img src={contributebg} alt="contributeimage" />
                 <div className="text-overlay">
@@ -41,6 +43,8 @@ export default function Community() {
                     <div className='small-text'>Taking Place on March <span className="highlight">22nd</span> Sunday  </div>
                 </div>
             </div>
+            
+            {/* Carousel */}
             <div className='carousel-text'>The Era Of Change</div>
             <div className="community-carousel">
                 <div className="slider-container">
@@ -57,40 +61,75 @@ export default function Community() {
                         <div>
                             <img className='com-images' src={carousel4} alt="carousel4"></img>
                         </div>
-
                     </Slider>
                 </div>
             </div>
+            
+            {/* Carousel Text */}
             <div className='carousel-txt'>
                 <h1 className='carouseltxt-h1'>
                     "Uniting Hearts, Nourishing Souls: Together, Let's Feed Our Neighbors in Need!"</h1>
                 <p className='carouseltxt-p1'>In our caring community, we're coming together to combat hunger and support one another. Join us in this act of solidarity as we share meals and uplift spirits. Together, we're making a meaningful difference, one plate at a time. Let's show that no one is alone in their struggles and that together, we're stronger. Join us in nourishing bodies and hearts alike.
-
-
-
-
-
                 </p>
             </div>
-
-
+            
+            {/* Instagram Posts */}
             <div className='instanews'>
                 <h1>Check our Latest News On Instagram</h1>
                 <div className="instagram-posts">
+                    {/* Instagram Post 1 */}
                     <div className="insta-post">
-                        <img src="https://via.placeholder.com/150" alt="Instagram post 1" />
+                        <iframe
+                            title="Instagram post 1"
+                            src="https://www.instagram.com/p/CTKWo7jpLzI/embed"
+                            width="320"
+                            height="386"
+                            frameborder="0"
+                            scrolling="no"
+                            allowtransparency="true"
+                        ></iframe>
                     </div>
+                    {/* Instagram Post 2 */}
                     <div className="insta-post">
-                        <img src="https://via.placeholder.com/150" alt="Instagram post 2" />
+                        <iframe
+                            title="Instagram post 2"
+                            src="https://www.instagram.com/reel/CV-NE74AStU/embed"
+                            width="320"
+                            height="386"
+                            frameborder="0"
+                            scrolling="no"
+                            allowtransparency="true"
+                        ></iframe>
                     </div>
+                    {/* Instagram Post 3 */}
                     <div className="insta-post">
-                        <img src="https://via.placeholder.com/150" alt="Instagram post 3" />
+                        <iframe
+                            title="Instagram post 3"
+                            src="https://www.instagram.com/reel/Ct_usgSPacZ/embed"
+                            width="320"
+                            height="386"
+                            frameborder="0"
+                            scrolling="no"
+                            allowtransparency="true"
+                        ></iframe>
                     </div>
-                    <div className="insta-post">
-                        <img src="https://via.placeholder.com/150" alt="Instagram post 4" />
+                       {/* Instagram Post 2 */}
+                       <div className="insta-post">
+                        <iframe
+                            title="Instagram post 2"
+                            src="https://www.instagram.com/reel/C4qp5uwrq8h/embed"
+                            width="320"
+                            height="386"
+                            frameborder="0"
+                            scrolling="no"
+                            allowtransparency="true"
+                        ></iframe>
                     </div>
                 </div>
             </div>
+
+            
+            {/* Footer */}
             <div className='community-footer'>
                 <div className='cfooter'>
                     <div>

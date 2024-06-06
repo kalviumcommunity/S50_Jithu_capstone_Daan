@@ -1,0 +1,328 @@
+.accbody {
+    display: flex;
+}
+
+.sidewindow {
+    background-color: blueviolet;
+    width: 20%;
+    height: 48vw;
+    position: fixed;
+}
+
+
+
+
+.nav-icon {
+    height: 35px;
+    padding-right: 20px;
+    margin-top: -2%;
+    margin-left: 5%;
+}
+
+.dashboard-name {
+    color: white;
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: initial;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 20px;
+}
+
+.nav-item {
+    display: flex;
+    padding: 10%;
+}
+
+.accountnav-links {
+    margin-top: 30%;
+}
+
+.thepost{
+    margin-left: 20%;
+}
+
+.small-profile {
+    height: 100px;
+    width: 100px;
+    background-color: rgb(102, 255, 0);
+    border-radius: 50px;
+     padding: 2px;
+     position: relative;
+
+}
+
+
+
+
+/* .addpic{
+    height: 30px;
+    width:30px;
+    background-color: #17086e;
+    margin-top: -20%;
+    margin-left: 100%;
+    border-radius: 50px;
+    position: absolute;
+} */
+
+.profile-name {
+    font-weight: 500;
+    font-style: normal;
+    font-size: 20px;
+}
+
+.profile-section {
+    display: flex;
+    padding: 10px;
+    border-radius: 15px;
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: initial;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 20px;
+    width: 50vw;
+}
+
+.profile-bottonss {
+    align-items: center;
+    background-color: blueviolet;
+    margin-left: 20px;
+    color: white;
+    padding: 6px 20px 6px 20px;
+    border-radius: 10px;
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: initial;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 18px;
+}
+
+.profile1 {
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+
+
+.myposts {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 3fr));
+    gap: 20px;
+}
+
+.mypost {
+    font-family: "Segoe UI", sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: #f0f0f0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    height: 60px;
+    transition: all 0.3s ease;
+}
+
+.mypost:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.accpost-mainbox {
+    margin-left: 5%;
+    width: 90%;
+    height: 500px;
+    padding: 15px;
+    background-color: #afa4eb;
+    border-radius: 10px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.accpost-mainbox:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.accpost-box {margin-top: 10%;
+    height: 400px;
+    width: 400px;
+    border-radius: 10px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.accpost-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.accmenu-title,
+.accmenu-address,
+.accmenu-location,
+.accmenu-canDeliver {
+    margin-top: 10px;
+}
+
+.accform-texts {
+    font-size: 20px;
+    font-weight: bold;
+    color: #555;
+    margin-left: 20%;
+
+}
+
+
+.accform-postdetails {
+    width: 100%;
+    margin-left: 20%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: initial;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 18px;}
+
+
+
+
+.Allscroll {
+    overflow: scroll;
+    height: 40vw;
+}
+.Allscroll::-webkit-scrollbar {
+    width: 0;
+  }
+
+
+
+/* Add animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.fadeIn {
+    animation: fadeIn 0.5s ease;
+}
+
+.delivery{
+    margin-left: 70%;
+}
+
+
+.deletebtn{
+    background-color: red;
+    padding: 5px 20px 5px 20px;
+
+    border-radius: 5px;
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: initial;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 20px;
+    margin-top: 30px;
+    color: white;
+
+
+}
+
+.editbtn{
+    background-color: #17086e;
+    padding: 5px 20px 5px 20px;
+    margin-top: 30px;
+    border-radius: 5px;
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: initial;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 20px;
+    color: white;
+
+}
+
+
+/* Overlay for making the background non-clickable and darkened */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+}
+
+/* Popup styling for a clean and centered look */
+.edit-popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    z-index: 1010;
+    width: 600px;
+    height: 400px;
+    max-width: 400px;
+    text-align: center;
+}
+
+/* Labels for the form fields */
+/* .edit-popup label {
+    display: block;
+    margin-bottom: 30px;
+    font-weight: bold;
+    color: #333;
+    text-align: left;
+} */
+
+/* Inputs and textareas for the form fields */
+/* .edit-popup input,
+.edit-popup textarea {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 10px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-size: 16px;
+} */
+
+/* Buttons styling for save and cancel */
+.savebtn,
+.cancelbtn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    width: 45%;
+    margin-top: 20px;
+}
+
+/* Save button styling */
+.savebtn {
+    background-color: #4CAF50;
+    color: white;
+    margin-right: 10%;
+}
+
+/* Cancel button styling */
+.cancelbtn {
+    background-color: #f44336;
+    color: white;
+}

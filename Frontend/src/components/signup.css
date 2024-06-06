@@ -35,7 +35,7 @@
 
 }
 .llbox1{
-height: 800px;
+height: 850px;
     width: 700px;
     background-color: #9c96cb;
     border: 1px solid rgb(178, 18, 18);
@@ -97,7 +97,7 @@ height: 800px;
 
 .lbox2{
     background-color: #3c1971;
-    height: 600px;
+    height: 700px;
     width: 300px;
     margin-top:90px;
     margin-left: 50px;
@@ -108,7 +108,7 @@ height: 800px;
 
 .formbox{
     background-color: #ffffff;
-    height: 600px;
+    height: 700px;
     width: 360px;
     margin-top: 90px;
     margin-right: 50px;

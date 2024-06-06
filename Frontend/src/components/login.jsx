@@ -4,6 +4,7 @@ import logo from "../assets/logo.png";
 import image1 from "../assets/image4.png";
 import axios from 'axios';
 import google from "../assets/google.png";
+import Cookies from 'js-cookie';
 
 export default function Login() {
     const [email, setEmail] = useState('');
@@ -23,11 +24,14 @@ export default function Login() {
 
         try {
             const response = await axios.post('http://localhost:4000/users/login', {
-                email: email,
-                password: password
+                 email,
+                 password
             });
-
-            console.log('Login response:', response.data);
+            const { token , user } = response.data
+            Cookies.set('username', user.username);
+            Cookies.set('email', user.email);
+            Cookies.set('password', user.password);
+            Cookies.set('token', token);
             setErrorMessage('');
 
         } catch (error) {
